@@ -1,0 +1,3 @@
+[submodule "Nextion2Text"]
+	path = Nextion2Text
+	url = https://github.com/Hummtaro/Nextion2Text.git

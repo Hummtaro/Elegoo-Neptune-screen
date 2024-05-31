@@ -1,0 +1,311 @@
+Page warn_aux
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t3.font=0
+            t4.font=0
+            t5.font=0
+            if(langue==0)
+            {
+                t3.font=1
+                t4.font=1
+                t5.font=1
+                t3.txt="è¾…åŠ©è°ƒå¹³çš„æ–¹æ³•æ˜¯é€šè¿‡æ—‹è½¬å¹³å°ä¸‹æ–¹çš„æ‰‹æ‹§èžºæ¯è°ƒæ•´å–·å˜´ä¸Žå¹³å°çš„è·ç¦»(A4çº¸åŽšåº¦)"
+                t4.txt="ç¡®è®¤"
+                t5.txt="å–æ¶ˆ"
+            }else if(langue==1)
+            {
+                t3.txt="Adjust the distance between the nozzle and the bed by turning the nut (about A4 paper thickness)"
+                t4.txt="Confirm"
+                t5.txt="Cancle"
+            }else if(langue==2)
+            {
+                t3.txt="Ajuste la distancia entre la boquilla y la cama girando la tuerca (sobre un grosor de papel A4)"
+                t4.txt="Confirmar"
+                t5.txt="Cancelar"
+            }else if(langue==3)
+            {
+                t3.txt="RÃ©glez la distance entre la buse et le lit en tournant l'Ã©crou (Ã©paisseur de papier A4 environ)"
+                t4.txt="confirmer"
+                t5.txt="Annuler"
+            }else if(langue==4)
+            {
+                t3.txt="Regolare la distanza tra l'ugello e il letto ruotando il dado (circa lo spessore della carta A4)"
+                t4.txt="Conferma"
+                t5.txt="Annulla"
+            }else if(langue==5)
+            {
+                t3.txt="ÐžÑ‚Ñ€ÐµÐ³ÑƒÐ»Ð¸Ñ€ÑƒÐ¹Ñ‚Ðµ Ñ€Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ ÑÐ¾Ð¿Ð»Ð¾Ð¼ Ð¸ ÑÑ‚Ð°Ð½Ð¸Ð½Ð¾Ð¹, Ð¿Ð¾Ð²Ð¾Ñ€Ð°Ñ‡Ð¸Ð²Ð°Ñ Ð³Ð°Ð¹ÐºÑƒ (Ñ‚Ð¾Ð»Ñ‰Ð¸Ð½Ð° Ð±ÑƒÐ¼Ð°Ð³Ð¸ Ð¿Ñ€Ð¸Ð¼ÐµÑ€Ð½Ð¾ Ð4)."
+                t4.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t5.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+            }else if(langue==6)
+            {
+                t3.txt="Passen Sie den Abstand zwischen der DÃ¼se und dem Bett an, indem Sie die Mutter drehen (etwa A4-PapierstÃ¤rke)."
+                t4.txt="BestÃ¤tigen"
+                t5.txt="Stornieren"
+            }else if(langue==7)
+            {
+                t3.font=1
+                t4.font=1
+                t5.font=1
+                t3.txt="ãƒŠãƒƒãƒˆã‚’å›žã—ã¦ãƒŽã‚ºãƒ«ã¨ãƒ™ãƒƒãƒ‰ã®è·é›¢ã‚’èª¿æ•´ã—ã¾ã™ï¼ˆA4ç”¨ç´™ã®åŽšã•ç¨‹åº¦ï¼‰"
+                t4.txt="ç¢ºèª"
+                t5.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«s"
+            }
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Variable (int32) va0
+    Attributes
+        ID   : 6
+        Scope: local
+        Value: 0
+    
+Text t3
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 121
+        Width                   : 249
+        Height                  : 75
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è¾…åŠ©è°ƒå¹³çš„æ–¹æ³•æ˜¯é€šè¿‡æ—‹è½¬å¹³å°ä¸‹æ–¹çš„æ‰‹æ‹§èžºæ¯è°ƒæ•´å–·å˜´ä¸Žå¹³å°çš„è·ç¦»(A4çº¸åŽšåº¦)
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t4
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 23
+        y coordinate            : 330
+        Width                   : 104
+        Height                  : 45
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 10
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 14
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            level_aux.q1.picc=179
+            level_aux.q2.picc=179
+            level_aux.q3.picc=179
+            level_aux.q4.picc=179
+            level_aux.q5.picc=179
+            level_aux.q6.picc=179
+            level_aux.q7.picc=179
+            page level_aux
+        
+Text t5
+    Attributes
+        ID                      : 7
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 140
+        y coordinate            : 331
+        Width                   : 103
+        Height                  : 44
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å–æ¶ˆ
+        Max. Text Size          : 10
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            if(main.va0.val==1) //Pro
+            {
+                page leveldata_36
+            }else if(main.va0.val==2) //MAX
+            {
+                page aux49_data
+            }else if(main.va0.val==3) //PLUS
+            {
+                //page aux64_data
+                page aux63_data
+            }else
+            {
+                page leveldata_36
+            }
+        
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 80
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 149
+    
+Picture p1
+    Attributes
+        ID               : 4
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 80
+        y coordinate     : 213
+        Width            : 116
+        Height           : 108
+        Effect           : load
+        Picture ID       : 177
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Timer tm0
+    Attributes
+        ID         : 5
+        Scope      : local
+        Period (ms): 500
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            va0.val++
+            if(va0.val==1)
+            {
+                p1.pic=177
+            }else if(va0.val==2)
+            {
+                p1.pic=178
+                va0.val=0
+            }
+        
+Timer tm_rest
+    Attributes
+        ID         : 8
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

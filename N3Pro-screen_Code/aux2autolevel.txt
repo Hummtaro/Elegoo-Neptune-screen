@@ -1,0 +1,529 @@
+Page aux2autolevel
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t0.font=0
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            t4.font=0
+            t5.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t4.font=1
+                t5.font=1
+                t0.txt="å®Œæˆè¾…åŠ©è°ƒå¹³"
+                t1.txt="è¯·ç‚¹å‡»ç¡®è®¤è¿›è¡Œè‡ªåŠ¨è°ƒå¹³"
+                t2.txt="ç¡®è®¤"
+                t3.txt="å–æ¶ˆ"
+                t4.txt="è‹¥ç‚¹å‡»å–æ¶ˆ"
+                t5.txt="å°†æ¸…é™¤å‰ä¸€æ¬¡è‡ªåŠ¨è°ƒå¹³æµ‹é‡æ•°æ®"
+            }else if(langue==1)
+            {
+                t0.txt="Auxiliary leveling completed"
+                t1.txt="Press Confirm to auto-leveling\r               immediately"
+                t2.txt="Confirm"
+                t3.txt="Cancel"
+                t4.txt="Press Cancel will"
+                t5.txt="Clear the previous auto-leveling\r          measurement data"
+            }else if(langue==2)
+            {
+                t0.txt="NivelaciÃ³n auxiliar completada"
+                t1.txt="NivelaciÃ³n automÃ¡tica inmediatamente?"
+                t2.txt="Confirmar"
+                t3.txt="Cancelar"
+                t4.txt="Si presiona Cancelar se"
+                t5.txt="Borrar los datos de mediciÃ³n de nivelaciÃ³n automÃ¡tica anteriores"
+            }else if(langue==3)
+            {
+                t0.txt="Nivellement auxiliaire terminÃ©"
+                t1.txt="Cette opÃ©ration dÃ©clenchera l'action de retour Ã  zÃ©ro s'il faut continuer?"
+                t2.txt="Confirmer"
+                t3.txt="Annuler"
+                t4.txt="Si vous appuyez sur Annuler"
+                t5.txt="Effacer les donnÃ©es de mesure de mise Ã  niveau automatique prÃ©cÃ©dentes"
+            }else if(langue==4)
+            {
+                t0.txt="Livellamento ausiliario completato"
+                t1.txt="Nivellement automatique immÃ©diat?"
+                t2.txt="Conferma"
+                t3.txt="Annulla"
+                t4.txt="Se premi Annulla lo farÃ "
+                t5.txt="Cancella i precedenti dati di misurazione del livellamento automatico"
+            }else if(langue==5)
+            {
+                t0.txt="Ð’ÑÐ¿Ð¾Ð¼Ð¾Ð³Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ð²Ñ‹Ñ€Ð°Ð²Ð½Ð¸Ð²Ð°Ð½Ð¸Ðµ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¾"
+                t1.txt="ÐÐ²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð²Ñ‹Ñ€Ð°Ð²Ð½Ð¸Ð²Ð°Ð½Ð¸Ðµ Ð½ÐµÐ¼ÐµÐ´Ð»ÐµÐ½Ð½Ð¾?"
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t3.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+                t4.txt="Ð•ÑÐ»Ð¸ Ð½Ð°Ð¶Ð°Ñ‚ÑŒ ÐžÑ‚Ð¼ÐµÐ½Ð°"
+                t5.txt="ÐžÑ‡Ð¸ÑÑ‚Ð¸Ñ‚ÑŒ Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰Ð¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¸Ð·Ð¼ÐµÑ€ÐµÐ½Ð¸Ñ Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ð²Ñ‹Ñ€Ð°Ð²Ð½Ð¸Ð²Ð°Ð½Ð¸Ñ"
+            }else if(langue==6)
+            {
+                t0.txt="Hilfsnivellierung abgeschlossen"
+                t1.txt="Sofortige automatische Nivellierung"
+                t2.txt="BestÃ¤tigen"
+                t3.txt="Stornieren"
+                t4.txt="Wenn Sie auf Abbrechen drÃ¼cken"
+                t5.txt="LÃ¶schen Sie die vorherigen Messdaten der automatischen Nivellierung"
+            }else if(langue==7)
+            {
+                t0.font=1
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t4.font=1
+                t5.font=1
+                t0.txt="è£œåŠ©ãƒ¬ãƒ™ãƒªãƒ³ã‚°å®Œäº†"
+                t1.txt="ã™ãã«è‡ªå‹•ãƒ¬ãƒ™ãƒªãƒ³ã‚°?"
+                t2.txt="ç¢ºèª"
+                t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+                t4.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ãŸå ´åˆ"
+                t5.txt="ä»¥å‰ã®ã‚ªãƒ¼ãƒˆãƒ¬ãƒ™ãƒªãƒ³ã‚°æ¸¬å®šãƒ‡ãƒ¼ã‚¿ã‚’ã‚¯ãƒªã‚¢ã™ã‚‹"
+            }
+            losspage=73
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t0
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 16
+        y coordinate            : 120
+        Width                   : 238
+        Height                  : 37
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å®Œæˆè¾…åŠ©è°ƒå¹³\r\n
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t2
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 32
+        y coordinate            : 293
+        Width                   : 95
+        Height                  : 44
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 10
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 09
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            //æ ¹æ®æœºåž‹ç¡®å®šè°ƒå¹³ç‚¹æ•°
+            if(main.va0.val==1) //Pro
+            {
+                leveling.va1.val=1
+                page leveling_36
+            }else if(main.va0.val==2) //PLUS
+            {
+                leveling.va1.val=2
+                page leveling_49
+            }else if(main.va0.val==3) //MAX
+            {
+                leveling.va1.val=3
+                //page leveling_64
+                page leveling_63
+            }else
+            {
+                page leveling
+                leveling.va1.val=1
+            }
+        
+Text t1
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 16
+        y coordinate            : 156
+        Width                   : 238
+        Height                  : 50
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è¯·ç‚¹å‡»ç¡®è®¤è¿›è¡Œè‡ªåŠ¨è°ƒå¹³
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t3
+    Attributes
+        ID                      : 5
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 146
+        y coordinate            : 295
+        Width                   : 94
+        Height                  : 43
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å–æ¶ˆ
+        Max. Text Size          : 10
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 15
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            if(leveling.va1.val==2) //PLUS
+            {
+                aux49_data.x0.val=0
+                aux49_data.x1.val=0
+                aux49_data.x2.val=0
+                aux49_data.x3.val=0
+                aux49_data.x4.val=0
+                aux49_data.x5.val=5
+                aux49_data.x6.val=0
+                aux49_data.x7.val=0
+                aux49_data.x8.val=0
+                aux49_data.x9.val=0
+                aux49_data.x10.val=0
+                aux49_data.x11.val=0
+                aux49_data.x12.val=0
+                aux49_data.x13.val=0
+                aux49_data.x14.val=0
+                aux49_data.x15.val=0
+                aux49_data.x16.val=0
+                aux49_data.x17.val=0
+                aux49_data.x18.val=0
+                aux49_data.x19.val=0
+                aux49_data.x20.val=0
+                aux49_data.x21.val=0
+                aux49_data.x22.val=0
+                aux49_data.x23.val=0
+                aux49_data.x24.val=0
+                aux49_data.x25.val=0
+                aux49_data.x26.val=0
+                aux49_data.x27.val=0
+                aux49_data.x28.val=0
+                aux49_data.x29.val=0
+                aux49_data.x30.val=0
+                aux49_data.x31.val=0
+                aux49_data.x32.val=0
+                aux49_data.x33.val=0
+                aux49_data.x34.val=0
+                aux49_data.x35.val=0
+                aux49_data.x36.val=0
+                aux49_data.x37.val=0
+                aux49_data.x38.val=0
+                aux49_data.x39.val=0
+                aux49_data.x40.val=0
+                aux49_data.x42.val=0
+                aux49_data.x43.val=0
+                aux49_data.x44.val=0
+                aux49_data.x45.val=0
+                aux49_data.x46.val=0
+                aux49_data.x47.val=0
+                aux49_data.x48.val=0
+                page aux49_data
+            }else if(leveling.va1.val==3) //MAX
+            {
+                aux63_data.x0.val=0
+                aux63_data.x1.val=0
+                aux63_data.x2.val=0
+                aux63_data.x3.val=0
+                aux63_data.x4.val=0
+                aux63_data.x5.val=5
+                aux63_data.x6.val=0
+                aux63_data.x7.val=0
+                aux63_data.x8.val=0
+                aux63_data.x9.val=0
+                aux63_data.x10.val=0
+                aux63_data.x11.val=0
+                aux63_data.x12.val=0
+                aux63_data.x13.val=0
+                aux63_data.x14.val=0
+                aux63_data.x15.val=0
+                aux63_data.x16.val=0
+                aux63_data.x17.val=0
+                aux63_data.x18.val=0
+                aux63_data.x19.val=0
+                aux63_data.x20.val=0
+                aux63_data.x21.val=0
+                aux63_data.x22.val=0
+                aux63_data.x23.val=0
+                aux63_data.x24.val=0
+                aux63_data.x25.val=0
+                aux63_data.x26.val=0
+                aux63_data.x27.val=0
+                aux63_data.x28.val=0
+                aux63_data.x29.val=0
+                aux63_data.x30.val=0
+                aux63_data.x31.val=0
+                aux63_data.x32.val=0
+                aux63_data.x33.val=0
+                aux63_data.x34.val=0
+                aux63_data.x35.val=0
+                aux63_data.x36.val=0
+                aux63_data.x37.val=0
+                aux63_data.x38.val=0
+                aux63_data.x39.val=0
+                aux63_data.x40.val=0
+                aux63_data.x42.val=0
+                aux63_data.x43.val=0
+                aux63_data.x44.val=0
+                aux63_data.x45.val=0
+                aux63_data.x46.val=0
+                aux63_data.x47.val=0
+                aux63_data.x48.val=0
+                aux63_data.x49.val=0
+                aux63_data.x50.val=0
+                aux63_data.x51.val=0
+                aux63_data.x52.val=0
+                aux63_data.x53.val=0
+                aux63_data.x54.val=0
+                aux63_data.x55.val=0
+                aux63_data.x56.val=0
+                aux63_data.x57.val=0
+                aux63_data.x58.val=0
+                aux63_data.x59.val=0
+                aux63_data.x60.val=0
+                aux63_data.x61.val=0
+                aux63_data.x62.val=0
+                page aux63_data
+            }
+        
+Text t4
+    Attributes
+        ID                      : 6
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 16
+        y coordinate            : 205
+        Width                   : 238
+        Height                  : 37
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è‹¥ç‚¹å‡»å–æ¶ˆ
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t5
+    Attributes
+        ID                      : 7
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 16
+        y coordinate            : 240
+        Width                   : 238
+        Height                  : 52
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å°†æ¸…é™¤å‰ä¸€æ¬¡è‡ªåŠ¨è°ƒå¹³æµ‹é‡æ•°æ®
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 52
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 49
+    
+Timer tm_rest
+    Attributes
+        ID         : 8
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

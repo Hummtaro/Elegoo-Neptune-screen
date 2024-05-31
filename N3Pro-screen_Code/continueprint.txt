@@ -1,0 +1,324 @@
+Page continueprint
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ˜¯å¦æ¢å¤æ‰“å°"
+                t2.txt="ç¡®è®¤"
+                t3.txt="å–æ¶ˆ"
+            }else if(langue==1)
+            {
+                t1.txt="        Power Loss Recovery\rThere has been a power outage,\rdo you want to resume the job? "
+                t2.txt="Confirm"
+                t3.txt="Cancel"
+            }else if(langue==2)
+            {
+                t1.txt="Â¿Quieres reanudar la impresiÃ³n?"
+                t2.txt="Confirmar"
+                t3.txt="Cancelar"
+            }else if(langue==3)
+            {
+                t1.txt="RÃ©cupÃ©ration de panne de courant; il y a eu une panne de courant, voulez-vous reprendre l'impressionÂ ?"
+                t2.txt="Confirmer"
+                t3.txt="Annuler"
+            }else if(langue==4)
+            {
+                t1.txt="Recupero della perdita di potenza;c'Ã¨ stata un'interruzione di corrente,vuoi riprendere il lavoro?"
+                t2.txt="Conferma"
+                t3.txt="Annulla"
+            }else if(langue==5)
+            {
+                t1.txt="Ð’Ð¾ÑÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ñ‚ÐµÑ€Ð¸ Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚Ð¸; Ð¿Ñ€Ð¾Ð¸Ð·Ð¾ÑˆÐ»Ð¾ Ð¾Ñ‚ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐºÑ‚Ñ€Ð¾ÑÐ½ÐµÑ€Ð³Ð¸Ð¸,  Ð²Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð²Ð¾Ð·Ð¾Ð±Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ?"
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t3.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+            }else if(langue==6)
+            {
+                t1.txt="Wiederherstellung nach Stromausfall. MÃ¶chten Sie den Druck fortsetzen?"
+                t2.txt="BestÃ¤tigen"
+                t3.txt="Stornieren"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="åœé›»å¾©æ—§ ä»•äº‹ã‚’å†é–‹ã—ãŸã„ã§ã™ã‹ï¼Ÿ"
+                t2.txt="ç¢ºèª"
+                t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+            }
+            if(losspage==77)
+            {
+                page_return.val=77
+                losspage=23
+                wepo losspage,5
+                page page_return.val
+            }else if(losspage==78)
+            {
+                page_return.val=78
+                losspage=23
+                wepo losspage,5
+                page page_return.val
+            }else if(losspage==79)
+            {
+                page_return.val=79
+                losspage=23
+                wepo losspage,5
+                page page_return.val
+            }else
+            {
+                page_return.val=0
+                losspage=23
+                wepo losspage,5
+            }
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Variable (int32) page_return
+    Attributes
+        ID   : 8
+        Scope: local
+        Value: 0
+    
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 17
+        y coordinate            : 226
+        Width                   : 242
+        Height                  : 88
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    :         Powerloss Recovery \r\nthere has been a power outage \r\ndo you want to resume the job? 
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t0
+    Attributes
+        ID                      : 3
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 17
+        y coordinate            : 145
+        Width                   : 242
+        Height                  : 80
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t2
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 30
+        y coordinate            : 322
+        Width                   : 100
+        Height                  : 41
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5F
+            printh 01
+            printh 00 01
+        
+Text t3
+    Attributes
+        ID                      : 5
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 143
+        y coordinate            : 320
+        Width                   : 102
+        Height                  : 46
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å–æ¶ˆ
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5F
+            printh 01
+            printh 00 02
+        
+Text t4
+    Attributes
+        ID                      : 6
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 11
+        y coordinate            : 241
+        Width                   : 247
+        Height                  : 2
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 80
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 49
+    
+Timer tm_rest
+    Attributes
+        ID         : 7
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

@@ -1,0 +1,232 @@
+Page leveling
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 86
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            if(leveling.va1.val==1)
+            {
+                //leveling.p0.pic=134
+            }else
+            {
+                //leveling.p0.pic=28
+                leveling.va1.val=0
+            }
+            leveling.tm0.en=0
+            level_heating.font=0
+            if(langue==0)
+            {
+                level_heating.font=1
+                level_heating.txt="æ­£åœ¨åŠ çƒ­ï¼Œè¯·ç­‰å¾…"
+            }else if(langue==1)
+            {
+                level_heating.txt="It is heating, please wait."
+            }else if(langue==2)
+            {
+                level_heating.txt="Ser calentado, por favor espere"
+            }else if(langue==3)
+            {
+                level_heating.txt="Chauffe, veuillez patienter"
+            }else if(langue==4)
+            {
+                level_heating.txt=" Si sta riscaldando, per favore aspetta."
+            }else if(langue==5)
+            {
+                level_heating.txt=" Ð˜Ð´ÐµÑ‚ Ð½Ð°Ð³Ñ€ÐµÐ², Ð¿Ð¾Ð´Ð¾Ð¶Ð´Ð¸Ñ‚Ðµ."
+            }else if(langue==6)
+            {
+                level_heating.txt="aufheizet werden, warten Sie bitte."
+            }else if(langue==7)
+            {
+                level_heating.font=1
+                level_heating.txt="åŠ ç†±ä¸­ã€ãŠå¾…ã¡ãã ã•ã„"
+            }
+            losspage=16
+            wepo losspage,5
+            wepo leveling.va1.val,120
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Variable (int32) va0
+    Attributes
+        ID   : 3
+        Scope: global
+        Value: 0
+    
+Variable (int32) va1
+    Attributes
+        ID   : 6
+        Scope: global
+        Value: 0
+    
+Text level_heating
+    Attributes
+        ID                      : 1
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 0
+        y coordinate            : 288
+        Width                   : 270
+        Height                  : 81
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ­£åœ¨åŠ çƒ­ï¼Œè¯·ç­‰å¾…
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text nozzletemp
+    Attributes
+        ID                      : 4
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 109
+        y coordinate            : 374
+        Width                   : 93
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text bedtemp
+    Attributes
+        ID                      : 5
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 110
+        y coordinate            : 408
+        Width                   : 80
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Timer tm0
+    Attributes
+        ID         : 2
+        Scope      : global
+        Period (ms): 400
+        Enabled    : no
+    
+    Events
+        Timer Event
+            if(langue==0)
+            {
+                level_heating.txt="è°ƒå¹³ä¸­ï¼Œè¯·ç­‰å¾…"
+            }else if(langue==1)
+            {
+                level_heating.txt="Leveling, please wait."
+            }else if(langue==2)
+            {
+                level_heating.txt="Nivelando, por favor espere"
+            }else if(langue==3)
+            {
+                level_heating.txt="Mise Ã  niveau, veuillez patienter"
+            }else if(langue==4)
+            {
+                level_heating.txt="Livellamento, attendere"
+            }else if(langue==5)
+            {
+                level_heating.txt="Ð’Ñ‹Ñ€Ð°Ð²Ð½Ð¸Ð²Ð°Ð½Ð¸Ðµ, Ð¿Ð¾Ð´Ð¾Ð¶Ð´Ð¸Ñ‚Ðµ"
+            }else if(langue==6)
+            {
+                level_heating.txt="Leveln, bitte warten"
+            }else if(langue==7)
+            {
+                level_heating.txt="ãƒ¬ãƒ™ãƒªãƒ³ã‚°ã€ãŠå¾…ã¡ãã ã•ã„"
+            }
+        
+Timer tm1
+    Attributes
+        ID         : 7
+        Scope      : local
+        Period (ms): 50
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            leveling.nozzletemp.txt=main.nozzletemp.txt
+            leveling.bedtemp.txt=main.bedtemp.txt
+        
+Timer tm_rest
+    Attributes
+        ID         : 8
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

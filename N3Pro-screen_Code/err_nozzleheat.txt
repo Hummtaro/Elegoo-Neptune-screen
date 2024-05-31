@@ -1,0 +1,142 @@
+Page err_nozzleheat
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            com_stop
+            dim=100
+            t0.font=0
+            t1.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t1.font=1
+                t0.txt="å–·å¤´åŠ çƒ­å¤±è´¥"
+                t1.txt="åœ¨è®¾å®šæ—¶é—´å†…å–·å¤´æ²¡æœ‰è¾¾åˆ°è®¾å®šçš„æ¸©åº¦å·®,åˆ™æŠ¥é”™;è¯·æ£€æŸ¥é…ç½®æ–‡ä»¶è®¾ç½®æˆ–æ£€æŸ¥ç”µæºåŠŸçŽ‡æ˜¯å¦è¶³å¤Ÿ"
+            }else if(langue==1)
+            {
+                t0.txt="Nozzle heating failed"
+                t1.txt="if the nozzle does not reach the set temperature difference within the set time, an error will be reported; please check the configuration file settings or whether the power supply is sufficient."
+            }else if(langue==2)
+            {
+                t0.txt="Fallo en el calentamiento de la boquilla"
+                t1.txt="error si la boquilla no alcanza la diferencia de temperatura establecida dentro del tiempo establecido; compruebe los ajustes del perfil o compruebe si la fuente de alimentaciÃ³n tiene suficiente potencia"
+            }else if(langue==3)
+            {
+                t0.txt="Le chauffage de la buse Ã©choue"
+                t1.txt="si la buse n'atteint pas la diffÃ©rence de tempÃ©rature dÃ©finie dans le dÃ©lai dÃ©fini, une erreur sera signalÃ©eÂ ; veuillez vÃ©rifier les paramÃ¨tres du fichier de configuration ou vÃ©rifier si l'alimentation Ã©lectrique est suffisante"
+            }else if(langue==4)
+            {
+                t0.txt="Il riscaldamento dell'ugello Ã¨ fallito"
+                t1.txt="se l'ugello non raggiunge la differenza di temperatura impostata entro il tempo impostato, verrÃ  segnalato un errore; verificare le impostazioni del file di configurazione o se l'alimentazione Ã¨ sufficiente."
+            }else if(langue==5)
+            {
+                t0.txt="ÐŸÐ¾Ð´Ð¾Ð³Ñ€ÐµÐ² ÑÐ¾Ð¿Ð»Ð° Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚"
+                t1.txt="ÐµÑÐ»Ð¸ ÑÐ¾Ð¿Ð»Ð¾ Ð½Ðµ Ð´Ð¾ÑÑ‚Ð¸Ð³Ð°ÐµÑ‚ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð½Ð¾Ð¹ Ñ€Ð°Ð·Ð½Ð¸Ñ†Ñ‹ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€ Ð² Ñ‚ÐµÑ‡ÐµÐ½Ð¸Ðµ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸, Ð±ÑƒÐ´ÐµÑ‚ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¾ Ð¾Ð± Ð¾ÑˆÐ¸Ð±ÐºÐµ; Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑŒÑ‚Ðµ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ Ñ„Ð°Ð¹Ð»Ð° ÐºÐ¾Ð½Ñ„Ð¸Ð³ÑƒÑ€Ð°Ñ†Ð¸Ð¸ Ð¸Ð»Ð¸ Ð´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾ Ð»Ð¸ Ð¿Ð¸Ñ‚Ð°Ð½Ð¸Ñ."
+            }else if(langue==6)
+            {
+                t0.txt="DÃ¼senheizung ausgefallen"
+                t1.txt="wenn die DÃ¼se die eingestellte Temperaturdifferenz nicht innerhalb der eingestellten Zeit erreicht, wird ein Fehler gemeldet. Bitte Ã¼berprÃ¼fen Sie die Einstellungen der Konfigurationsdatei oder ob die Stromversorgung ausreichtend ist"
+            }else if(langue==7)
+            {
+                t0.font=1
+                t1.font=1
+                t0.txt="ãƒŽã‚ºãƒ«ã®åŠ ç†±ãŒå¤±æ•—ã—ã¾ã—ãŸ"
+                t1.txt="è¨­å®šæ™‚é–“å†…ã«ãƒŽã‚ºãƒ«ãŒè¨­å®šæ¸©åº¦å·®ã«é”ã—ãªã„å ´åˆã€ã‚¨ãƒ©ãƒ¼ãŒå ±å‘Šã•ã‚Œã¾ã™ã€‚æ§‹æˆãƒ•ã‚¡ã‚¤ãƒ«ã®è¨­å®šã‚„é›»æºãŒååˆ†ã‹ã©ã†ã‹ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚"
+            }
+            losspage=1
+            wepo losspage,5
+        
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 228
+        Width                   : 249
+        Height                  : 146
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : åœ¨è®¾å®šæ—¶é—´å†…å–·å¤´æ²¡æœ‰è¾¾åˆ°è®¾å®šçš„æ¸©åº¦å·®ï¼Œåˆ™æŠ¥é”™ï¼›è¯·æ£€æŸ¥é…ç½®æ–‡ä»¶è®¾ç½®æˆ–æ£€æŸ¥ç”µæºåŠŸçŽ‡æ˜¯å¦è¶³
+        Max. Text Size          : 512
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t0
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 11
+        y coordinate            : 156
+        Width                   : 250
+        Height                  : 70
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : bottom
+        Input Type              : character
+        Text                    : å–·å¤´åŠ çƒ­å¤±è´¥
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 11
+        y coordinate     : 62
+        Width            : 252
+        Height           : 312
+        Effect           : load
+        Picture ID       : 87
+    
+Timer tm0
+    Attributes
+        ID         : 3
+        Scope      : local
+        Period (ms): 500
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            beep 500
+        

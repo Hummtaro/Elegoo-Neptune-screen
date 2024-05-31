@@ -1,0 +1,664 @@
+Page languageset
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 70
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t0.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t0.txt="è¯­è¨€"
+                languageset.p0.pic=72
+                languageset.p1.pic=71
+                languageset.p2.pic=71
+                languageset.p3.pic=71
+                languageset.p4.pic=71
+                languageset.p5.pic=71
+                languageset.p6.pic=71
+                languageset.p7.pic=71
+            }else if(langue==1)
+            {
+                t0.txt="Language"
+                languageset.p0.pic=71
+                languageset.p1.pic=72
+                languageset.p2.pic=71
+                languageset.p3.pic=71
+                languageset.p4.pic=71
+                languageset.p5.pic=71
+                languageset.p6.pic=71
+                languageset.p7.pic=71
+            }else if(langue==2)
+            {
+                t0.txt="Idioma"
+                languageset.p0.pic=71
+                languageset.p1.pic=71
+                languageset.p2.pic=72
+                languageset.p3.pic=71
+                languageset.p4.pic=71
+                languageset.p5.pic=71
+                languageset.p6.pic=71
+                languageset.p7.pic=71
+            }else if(langue==3)
+            {
+                t0.txt="Langue"
+                languageset.p0.pic=71
+                languageset.p1.pic=71
+                languageset.p2.pic=71
+                languageset.p3.pic=72
+                languageset.p4.pic=71
+                languageset.p5.pic=71
+                languageset.p6.pic=71
+                languageset.p7.pic=71
+            }else if(langue==4)
+            {
+                t0.txt="Lingua"
+                languageset.p0.pic=71
+                languageset.p1.pic=71
+                languageset.p2.pic=71
+                languageset.p3.pic=71
+                languageset.p4.pic=72
+                languageset.p5.pic=71
+                languageset.p6.pic=71
+                languageset.p7.pic=71
+            }else if(langue==5)
+            {
+                t0.txt="Ð¯Ð·Ñ‹Ðº"
+                languageset.p0.pic=71
+                languageset.p1.pic=71
+                languageset.p2.pic=71
+                languageset.p3.pic=71
+                languageset.p4.pic=71
+                languageset.p5.pic=72
+                languageset.p6.pic=71
+                languageset.p7.pic=71
+            }else if(langue==6)
+            {
+                t0.txt="Sprache"
+                languageset.p0.pic=71
+                languageset.p1.pic=71
+                languageset.p2.pic=71
+                languageset.p3.pic=71
+                languageset.p4.pic=71
+                languageset.p5.pic=71
+                languageset.p6.pic=72
+                languageset.p7.pic=71
+            }else if(langue==7)
+            {
+                t0.font=1
+                t0.txt="è¨€èªž"
+                languageset.p0.pic=71
+                languageset.p1.pic=71
+                languageset.p2.pic=71
+                languageset.p3.pic=71
+                languageset.p4.pic=71
+                languageset.p5.pic=71
+                languageset.p6.pic=71
+                languageset.p7.pic=72
+            }
+            losspage=31
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t0
+    Attributes
+        ID                      : 18
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 30
+        y coordinate            : 11
+        Width                   : 216
+        Height                  : 25
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è¯­è¨€
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 2
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 54
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p1
+    Attributes
+        ID               : 3
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 99
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p2
+    Attributes
+        ID               : 4
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 144
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p3
+    Attributes
+        ID               : 5
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 189
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p4
+    Attributes
+        ID               : 6
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 234
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p5
+    Attributes
+        ID               : 7
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 279
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p6
+    Attributes
+        ID               : 8
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 324
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Picture p7
+    Attributes
+        ID               : 9
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 233
+        y coordinate     : 369
+        Width            : 30
+        Height           : 30
+        Effect           : load
+        Picture ID       : 71
+    
+Hotspot m0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 0
+        y coordinate     : 0
+        Width            : 78
+        Height           : 42
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            page set
+        
+Hotspot m1
+    Attributes
+        ID               : 10
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 9
+        y coordinate     : 57
+        Width            : 254
+        Height           : 35
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=72
+            languageset.p1.pic=71
+            languageset.p2.pic=71
+            languageset.p3.pic=71
+            languageset.p4.pic=71
+            languageset.p5.pic=71
+            languageset.p6.pic=71
+            languageset.p7.pic=71
+            langue=0
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 01
+        
+Hotspot m2
+    Attributes
+        ID               : 11
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 8
+        y coordinate     : 103
+        Width            : 254
+        Height           : 34
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=72
+            languageset.p2.pic=71
+            languageset.p3.pic=71
+            languageset.p4.pic=71
+            languageset.p5.pic=71
+            languageset.p6.pic=71
+            languageset.p7.pic=71
+            langue=1
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 02
+        
+Hotspot m3
+    Attributes
+        ID               : 12
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 145
+        Width            : 250
+        Height           : 36
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=71
+            languageset.p2.pic=72
+            languageset.p3.pic=71
+            languageset.p4.pic=71
+            languageset.p5.pic=71
+            languageset.p6.pic=71
+            languageset.p7.pic=71
+            langue=2
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 03
+        
+Hotspot m4
+    Attributes
+        ID               : 13
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 9
+        y coordinate     : 191
+        Width            : 255
+        Height           : 34
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=71
+            languageset.p2.pic=71
+            languageset.p3.pic=72
+            languageset.p4.pic=71
+            languageset.p5.pic=71
+            languageset.p6.pic=71
+            languageset.p7.pic=71
+            langue=3
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 04
+        
+Hotspot m5
+    Attributes
+        ID               : 14
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 9
+        y coordinate     : 235
+        Width            : 254
+        Height           : 34
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=71
+            languageset.p2.pic=71
+            languageset.p3.pic=71
+            languageset.p4.pic=72
+            languageset.p5.pic=71
+            languageset.p6.pic=71
+            languageset.p7.pic=71
+            langue=4
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 05
+        
+Hotspot m6
+    Attributes
+        ID               : 15
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 7
+        y coordinate     : 277
+        Width            : 258
+        Height           : 37
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=71
+            languageset.p2.pic=71
+            languageset.p3.pic=71
+            languageset.p4.pic=71
+            languageset.p5.pic=72
+            languageset.p6.pic=71
+            languageset.p7.pic=71
+            langue=5
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 06
+        
+Hotspot m7
+    Attributes
+        ID               : 16
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 9
+        y coordinate     : 320
+        Width            : 254
+        Height           : 36
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=71
+            languageset.p2.pic=71
+            languageset.p3.pic=71
+            languageset.p4.pic=71
+            languageset.p5.pic=71
+            languageset.p6.pic=72
+            languageset.p7.pic=71
+            langue=6
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 07
+        
+Hotspot m8
+    Attributes
+        ID               : 17
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 8
+        y coordinate     : 362
+        Width            : 255
+        Height           : 42
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+            languageset.p0.pic=71
+            languageset.p1.pic=71
+            languageset.p2.pic=71
+            languageset.p3.pic=71
+            languageset.p4.pic=71
+            languageset.p5.pic=71
+            languageset.p6.pic=71
+            languageset.p7.pic=72
+            langue=7
+            wepo langue,0
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 5C
+            printh 01
+            printh 00 08
+        
+Timer tm_rest
+    Attributes
+        ID         : 19
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

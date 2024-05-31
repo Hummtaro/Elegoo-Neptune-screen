@@ -1,0 +1,1160 @@
+Page leveling_63
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 190
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            leveling_63.tm0.en=0
+            level_heating.font=0
+            if(langue==0)
+            {
+                level_heating.font=1
+                level_heating.txt="æ­£åœ¨åŠ çƒ­ï¼Œè¯·ç­‰å¾…"
+            }else if(langue==1)
+            {
+                level_heating.txt="It is heating, please wait."
+            }else if(langue==2)
+            {
+                level_heating.txt="Ser calentado, por favor espere"
+            }else if(langue==3)
+            {
+                level_heating.txt="Chauffe, veuillez patienter"
+            }else if(langue==4)
+            {
+                level_heating.txt=" Si sta riscaldando, per favore aspetta."
+            }else if(langue==5)
+            {
+                level_heating.txt=" Ð˜Ð´ÐµÑ‚ Ð½Ð°Ð³Ñ€ÐµÐ², Ð¿Ð¾Ð´Ð¾Ð¶Ð´Ð¸Ñ‚Ðµ."
+            }else if(langue==6)
+            {
+                level_heating.txt="aufheizet werden, warten Sie bitte."
+            }else if(langue==7)
+            {
+                level_heating.font=1
+                level_heating.txt="åŠ ç†±ä¸­ã€ãŠå¾…ã¡ãã ã•ã„"
+            }
+            leveling_63.q0.picc=190
+            leveling_63.q1.picc=190
+            leveling_63.q2.picc=190
+            leveling_63.q3.picc=190
+            leveling_63.q4.picc=190
+            leveling_63.q5.picc=190
+            leveling_63.q6.picc=190
+            leveling_63.q7.picc=190
+            leveling_63.q8.picc=190
+            leveling_63.q9.picc=190
+            leveling_63.q10.picc=190
+            leveling_63.q11.picc=190
+            leveling_63.q12.picc=190
+            leveling_63.q13.picc=190
+            leveling_63.q14.picc=190
+            leveling_63.q15.picc=190
+            leveling_63.q16.picc=190
+            leveling_63.q17.picc=190
+            leveling_63.q18.picc=190
+            leveling_63.q19.picc=190
+            leveling_63.q20.picc=190
+            leveling_63.q21.picc=190
+            leveling_63.q22.picc=190
+            leveling_63.q23.picc=190
+            leveling_63.q24.picc=190
+            leveling_63.q25.picc=190
+            leveling_63.q26.picc=190
+            leveling_63.q27.picc=190
+            leveling_63.q28.picc=190
+            leveling_63.q29.picc=190
+            leveling_63.q30.picc=190
+            leveling_63.q31.picc=190
+            leveling_63.q32.picc=190
+            leveling_63.q33.picc=190
+            leveling_63.q34.picc=190
+            leveling_63.q35.picc=190
+            leveling_63.q36.picc=190
+            leveling_63.q37.picc=190
+            leveling_63.q38.picc=190
+            leveling_63.q39.picc=190
+            leveling_63.q40.picc=190
+            leveling_63.q41.picc=190
+            leveling_63.q42.picc=190
+            leveling_63.q43.picc=190
+            leveling_63.q44.picc=190
+            leveling_63.q45.picc=190
+            leveling_63.q46.picc=190
+            leveling_63.q47.picc=190
+            leveling_63.q48.picc=190
+            leveling_63.q49.picc=190
+            leveling_63.q50.picc=190
+            leveling_63.q51.picc=190
+            leveling_63.q52.picc=190
+            leveling_63.q53.picc=190
+            leveling_63.q54.picc=190
+            leveling_63.q55.picc=190
+            leveling_63.q56.picc=190
+            leveling_63.q57.picc=190
+            leveling_63.q58.picc=190
+            leveling_63.q59.picc=190
+            leveling_63.q60.picc=190
+            leveling_63.q61.picc=190
+            leveling_63.q62.picc=190
+            losspage=76
+            wepo losspage,5
+            wepo leveling.va1.val,120
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text bedtemp
+    Attributes
+        ID                      : 1
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 110
+        y coordinate            : 408
+        Width                   : 80
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text nozzletemp
+    Attributes
+        ID                      : 2
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 109
+        y coordinate            : 374
+        Width                   : 93
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text level_heating
+    Attributes
+        ID                      : 69
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 0
+        y coordinate            : 320
+        Width                   : 265
+        Height                  : 50
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ­£åœ¨åŠ çƒ­ï¼Œè¯·ç­‰å¾…
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Crop Picture q0
+    Attributes
+        ID                      : 3
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q1
+    Attributes
+        ID                      : 4
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 49
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q2
+    Attributes
+        ID                      : 5
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 86
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q3
+    Attributes
+        ID                      : 6
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 125
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q4
+    Attributes
+        ID                      : 7
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 160
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q5
+    Attributes
+        ID                      : 8
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q6
+    Attributes
+        ID                      : 9
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 235
+        y coordinate            : 294
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q7
+    Attributes
+        ID                      : 10
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 233
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q8
+    Attributes
+        ID                      : 11
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 197
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q9
+    Attributes
+        ID                      : 12
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 161
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q10
+    Attributes
+        ID                      : 13
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 125
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q11
+    Attributes
+        ID                      : 14
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 86
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q12
+    Attributes
+        ID                      : 15
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 50
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q13
+    Attributes
+        ID                      : 16
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 265
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q14
+    Attributes
+        ID                      : 17
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 11
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q15
+    Attributes
+        ID                      : 18
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 50
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q16
+    Attributes
+        ID                      : 19
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 88
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q17
+    Attributes
+        ID                      : 20
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 124
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q18
+    Attributes
+        ID                      : 21
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 160
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q19
+    Attributes
+        ID                      : 22
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 197
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q20
+    Attributes
+        ID                      : 23
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 234
+        y coordinate            : 235
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q21
+    Attributes
+        ID                      : 24
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 235
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q22
+    Attributes
+        ID                      : 25
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 197
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q23
+    Attributes
+        ID                      : 26
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 160
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q24
+    Attributes
+        ID                      : 27
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 124
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q25
+    Attributes
+        ID                      : 28
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 88
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q26
+    Attributes
+        ID                      : 29
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 49
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q27
+    Attributes
+        ID                      : 30
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 205
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q28
+    Attributes
+        ID                      : 31
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q29
+    Attributes
+        ID                      : 32
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 50
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q30
+    Attributes
+        ID                      : 33
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 85
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q31
+    Attributes
+        ID                      : 34
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 123
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q32
+    Attributes
+        ID                      : 35
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 160
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q33
+    Attributes
+        ID                      : 36
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 196
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q34
+    Attributes
+        ID                      : 37
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 235
+        y coordinate            : 178
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q35
+    Attributes
+        ID                      : 38
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 235
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q36
+    Attributes
+        ID                      : 39
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 197
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q37
+    Attributes
+        ID                      : 40
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 160
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q38
+    Attributes
+        ID                      : 41
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 124
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q39
+    Attributes
+        ID                      : 42
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 88
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q40
+    Attributes
+        ID                      : 43
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 50
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q41
+    Attributes
+        ID                      : 44
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 14
+        y coordinate            : 149
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q42
+    Attributes
+        ID                      : 45
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q43
+    Attributes
+        ID                      : 46
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 50
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q44
+    Attributes
+        ID                      : 47
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 86
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q45
+    Attributes
+        ID                      : 48
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 125
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q46
+    Attributes
+        ID                      : 49
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 161
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q47
+    Attributes
+        ID                      : 50
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 199
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q48
+    Attributes
+        ID                      : 51
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 235
+        y coordinate            : 120
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q49
+    Attributes
+        ID                      : 52
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 235
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q50
+    Attributes
+        ID                      : 53
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 199
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q51
+    Attributes
+        ID                      : 54
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 162
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q52
+    Attributes
+        ID                      : 55
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 124
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q53
+    Attributes
+        ID                      : 56
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 86
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q54
+    Attributes
+        ID                      : 57
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 50
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q55
+    Attributes
+        ID                      : 58
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 89
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q56
+    Attributes
+        ID                      : 59
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 10
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q57
+    Attributes
+        ID                      : 60
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 51
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q58
+    Attributes
+        ID                      : 61
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 86
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q59
+    Attributes
+        ID                      : 62
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 124
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q60
+    Attributes
+        ID                      : 63
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 160
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q61
+    Attributes
+        ID                      : 64
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 196
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Crop Picture q62
+    Attributes
+        ID                      : 65
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 234
+        y coordinate            : 60
+        Width                   : 25
+        Height                  : 25
+        Effect                  : load
+        Cropped Back. Picture ID: 190
+    
+Timer tm0
+    Attributes
+        ID         : 66
+        Scope      : global
+        Period (ms): 50
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            level_heating.font=0
+            if(langue==0)
+            {
+                level_heating.font=1
+                level_heating.txt="è°ƒå¹³ä¸­ï¼Œè¯·ç­‰å¾…"
+            }else if(langue==1)
+            {
+                level_heating.txt="Leveling, please wait."
+            }else if(langue==2)
+            {
+                level_heating.txt="Nivelando, por favor espere"
+            }else if(langue==3)
+            {
+                level_heating.txt="Mise Ã  niveau, veuillez patienter"
+            }else if(langue==4)
+            {
+                level_heating.txt="Livellamento, attendere"
+            }else if(langue==5)
+            {
+                level_heating.txt="Ð’Ñ‹Ñ€Ð°Ð²Ð½Ð¸Ð²Ð°Ð½Ð¸Ðµ, Ð¿Ð¾Ð´Ð¾Ð¶Ð´Ð¸Ñ‚Ðµ"
+            }else if(langue==6)
+            {
+                level_heating.txt="Leveln, bitte warten"
+            }else if(langue==7)
+            {
+                level_heating.font=1
+                level_heating.txt="ãƒ¬ãƒ™ãƒªãƒ³ã‚°ã€ãŠå¾…ã¡ãã ã•ã„"
+            }
+        
+Timer tm1
+    Attributes
+        ID         : 67
+        Scope      : global
+        Period (ms): 50
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            leveling_63.nozzletemp.txt=main.nozzletemp.txt
+            leveling_63.bedtemp.txt=main.bedtemp.txt
+        
+Timer tm_rest
+    Attributes
+        ID         : 68
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

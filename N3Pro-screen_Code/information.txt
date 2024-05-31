@@ -1,0 +1,555 @@
+Page information
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 78
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            if(main.va0.val==1)
+            {
+                information.machine.txt="Neptune 3 Pro"
+                information.size.txt="225*225*280"
+            }else if(main.va0.val==2)
+            {
+                information.machine.txt="Neptune 3 Plus"
+                information.size.txt="320*320*400"
+            }else if(main.va0.val==3)
+            {
+                information.machine.txt="Neptune 3 Max"
+                information.size.txt="420*420*500"
+            }else
+            {
+                information.machine.txt="Neptune 3 Pro"
+                information.size.txt="225*225*280"
+            }
+            t0.font=0
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            t4.font=0
+            t5.font=0
+            t10.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t4.font=1
+                t5.font=1
+                t10.font=1
+                t0.txt="åž‹å·"
+                t1.txt="æ‰“å°å°ºå¯¸"
+                t2.txt="å›ºä»¶ç‰ˆæœ¬"
+                t3.txt="å±å¹•ç‰ˆæœ¬"
+                t4.txt="åˆ¶é€ å•†"
+                t5.txt="è”ç³»æˆ‘ä»¬"
+                t10.txt="ä¿¡æ¯"
+            }else if(langue==1)
+            {
+                t0.txt="Machine"
+                t1.txt="Size"
+                t2.txt="Firmware Version"
+                t3.txt="UI Version"
+                t4.txt="Manufacturer"
+                t5.txt="Contact"
+                t10.txt="About Machine"
+            }else if(langue==2)
+            {
+                t0.txt="Modelo"
+                t1.txt="TamaÃ±o de la ImpresiÃ³n"
+                t2.txt="Firmware Versiones"
+                t3.txt="versiÃ³n lcd"
+                t4.txt="fabricante"
+                t5.txt="ContÃ¡ctenos"
+                t10.txt="Sobre La MÃ¡quina"
+            }else if(langue==3)
+            {
+                t0.txt="ModÃ¨le"
+                t1.txt="Taille d'impression"
+                t2.txt="Version du firmware"
+                t3.txt="version lcd"
+                t4.txt="fabricante"
+                t5.txt="ContÃ¡ctenos"
+                t10.txt="Ã€ propos de la machine"
+            }else if(langue==4)
+            {
+                t0.txt="Tipo di macchina"
+                t1.txt="Dimensioni di stampa"
+                t2.txt="Versione del firmware"
+                t3.txt="versione lcd"
+                t4.txt="fabricant"
+                t5.txt="Nous contacter"
+                t10.txt="A proposito di macchina"
+            }else if(langue==5)
+            {
+                t0.txt="Ð¢Ð¸Ð¿ Ð°Ð¿Ð¿Ð°Ñ€Ð°Ñ‚Ð°"
+                t1.txt="Ð Ð°Ð·Ð¼ÐµÑ€ Ð¿ÐµÑ‡Ð°Ñ‚Ð¸"
+                t2.txt="Ð’ÐµÑ€ÑÐ¸Ñ Ð¿Ñ€Ð¾ÑˆÐ¸Ð²ÐºÐ¸"
+                t3.txt="Ð–Ðš-Ð²ÐµÑ€ÑÐ¸Ñ"
+                t4.txt="Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ"
+                t5.txt="ÑÐ²ÑÐ¶Ð¸Ñ‚ÐµÑÑŒ Ñ Ð½Ð°Ð¼Ð¸"
+                t10.txt="Ðž Ð¼Ð°ÑˆÐ¸Ð½Ðµ"
+            }else if(langue==6)
+            {
+                t0.txt="Maschinentyp"
+                t1.txt="DruckgrÃ¶ÃŸe"
+                t2.txt="Firmware Version"
+                t3.txt="LCD-Version"
+                t4.txt="Hersteller"
+                t5.txt="kontaktiere uns"
+                t10.txt="Ãœber Maschine"
+            }else if(langue==7)
+            {
+                t0.font=1
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t4.font=1
+                t5.font=1
+                t10.font=1
+                t0.txt="æ©Ÿæ¢°ã®ãƒ¢ãƒ‡ãƒ«"
+                t1.txt="ãƒ—ãƒªãƒ³ãƒˆã‚µã‚¤ã‚º"
+                t2.txt="ãƒ•ã‚¡ãƒ¼ãƒ ã‚¦ã‚§ã‚¢ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³"
+                t3.txt="æ¶²æ™¶ç‰ˆ"
+                t4.txt="ãƒ¡ãƒ¼ã‚«ãƒ¼"
+                t5.txt="ãŠå•ã„åˆã‚ã›"
+                t10.txt="ã‚¤ãƒ³ãƒ•ã‚©ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³"
+            }
+            losspage=35
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t0
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 42
+        Width                   : 124
+        Height                  : 52
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : åž‹å·
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t1
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 94
+        Width                   : 142
+        Height                  : 52
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ‰“å°å°ºå¯¸
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t2
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 141
+        Width                   : 179
+        Height                  : 55
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å›ºä»¶ç‰ˆæœ¬
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t3
+    Attributes
+        ID                      : 5
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 196
+        Width                   : 162
+        Height                  : 40
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ˜¾ç¤ºç‰ˆæœ¬
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t4
+    Attributes
+        ID                      : 6
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 249
+        Width                   : 110
+        Height                  : 40
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : åˆ¶é€ å•†
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t5
+    Attributes
+        ID                      : 7
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 300
+        Width                   : 123
+        Height                  : 44
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è”ç³»æˆ‘ä»¬
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text machine
+    Attributes
+        ID                      : 8
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 112
+        y coordinate            : 55
+        Width                   : 148
+        Height                  : 22
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : Neptune 3 Pro
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text size
+    Attributes
+        ID                      : 9
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 157
+        y coordinate            : 110
+        Width                   : 103
+        Height                  : 18
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 225X225X280
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text sversion
+    Attributes
+        ID                      : 10
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 199
+        y coordinate            : 155
+        Width                   : 61
+        Height                  : 23
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text lversion
+    Attributes
+        ID                      : 11
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 189
+        y coordinate            : 208
+        Width                   : 71
+        Height                  : 21
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 1.4
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t10
+    Attributes
+        ID                      : 12
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 32
+        y coordinate            : 13
+        Width                   : 216
+        Height                  : 25
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ä¿¡æ¯
+        Max. Text Size          : 128
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t6
+    Attributes
+        ID                      : 13
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 190
+        y coordinate            : 259
+        Width                   : 70
+        Height                  : 20
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : elegoo
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t7
+    Attributes
+        ID                      : 14
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 132
+        y coordinate            : 307
+        Width                   : 128
+        Height                  : 25
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : www.elegoo.com
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Hotspot m0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 0
+        y coordinate     : 0
+        Width            : 73
+        Height           : 41
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            page set
+        
+Timer tm_rest
+    Attributes
+        ID         : 15
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

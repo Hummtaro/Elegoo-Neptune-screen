@@ -1,0 +1,249 @@
+Page warn2_filament
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ¸©åº¦ä¸è¶³è¯·ç‚¹å‡»ç¡®è®¤\rå¼€å§‹åŠ çƒ­å–·å¤´æˆ–å–æ¶ˆ"
+                t2.txt="ç¡®è®¤"
+                t3.txt="å–æ¶ˆ"
+            }else if(langue==1)
+            {
+                t1.txt="Insufficient temperature, please click to confirm to start heating the nozzle or cancel"
+                t2.txt="Confirm"
+                t3.txt="Cancel"
+            }else if(langue==2)
+            {
+                t1.txt="Temperatura insuficiente, haga clic para confirmar para comenzar a calentar la boquilla o cancelar"
+                t2.txt="Confirmar"
+                t3.txt="Cancelar"
+            }else if(langue==3)
+            {
+                t1.txt="TempÃ©rature insuffisante, veuillez cliquer pour confirmer pour dÃ©marrer le chauffage de la buse ou annuler"
+                t2.txt="Confirmer"
+                t3.txt="Annuler"
+            }else if(langue==4)
+            {
+                t1.txt="Temperatura insufficiente, fare clic per confermare per avviare il riscaldamento dell'ugello o annullare"
+                t2.txt="Conferma"
+                t3.txt="Annulla"
+            }else if(langue==5)
+            {
+                t1.txt="ÐÐµÐ´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð°Ñ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ð°, Ð½Ð°Ð¶Ð¼Ð¸Ñ‚Ðµ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ð¾Ð´Ñ‚Ð²ÐµÑ€Ð´Ð¸Ñ‚ÑŒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ð°Ñ‡Ð°Ñ‚ÑŒ Ð½Ð°Ð³Ñ€ÐµÐ² ÑÐ¾Ð¿Ð»Ð° Ð¸Ð»Ð¸ Ð¾Ñ‚Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ"
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t3.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+            }else if(langue==6)
+            {
+                t1.txt="Unzureichende Temperatur, klicken Sie bitte zur BestÃ¤tigung, um mit dem Aufheizen der DÃ¼se zu beginnen, oder brechen Sie ab"
+                t2.txt="BestÃ¤tigen"
+                t3.txt="Stornieren"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ¸©åº¦ãŒä¸ååˆ†ã§ã™ã€‚ã‚¯ãƒªãƒƒã‚¯ã—ã¦ç¢ºèªã—ã€ãƒŽã‚ºãƒ«ã®åŠ ç†±ã‚’é–‹å§‹ã™ã‚‹ã‹ã€ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ã¦ãã ã•ã„"
+                t2.txt="ç¢ºèª"
+                t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+            }
+            losspage=37
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 10
+        y coordinate            : 146
+        Width                   : 250
+        Height                  : 170
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ¸©åº¦ä¸è¶³ç‚¹ç¡®è®¤å¼€å§‹åŠ çƒ­
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=100
+            }
+        
+Text t2
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 30
+        y coordinate            : 319
+        Width                   : 102
+        Height                  : 46
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 56
+            printh 01
+            printh 00 05
+        
+Text t3
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 140
+        y coordinate            : 323
+        Width                   : 110
+        Height                  : 44
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å–æ¶ˆ
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 56
+            printh 01
+            printh 00 06
+        
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 80
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 49
+    
+Timer tm_rest
+    Attributes
+        ID         : 5
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

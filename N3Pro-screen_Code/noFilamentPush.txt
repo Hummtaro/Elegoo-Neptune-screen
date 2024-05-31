@@ -1,0 +1,215 @@
+Page noFilamentPush
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            tm0.en=1
+            t1.font=0
+            t2.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t1.txt="è€—æå³å°†ç”¨å°½è¯·æ›´æ¢è€—æ"
+                t2.txt="ç¡®è®¤"
+            }else if(langue==1)
+            {
+                t1.txt="The filament are about to run out, please replace"
+                t2.txt="Confirm"
+            }else if(langue==2)
+            {
+                t1.txt="El filamento estÃ¡ a punto de agotarse, reemplace"
+                t2.txt="Confirmar"
+            }else if(langue==3)
+            {
+                t1.txt="Le filament est sur le point de s'Ã©puiser, veuillez le remplacer"
+                t2.txt="confirmer"
+            }else if(langue==4)
+            {
+                t1.txt="Il filamento sta per esaurirsi, sostituirlo"
+                t2.txt="Conferma"
+            }else if(langue==5)
+            {
+                t1.txt="ÐÐ¸Ñ‚ÑŒ Ð²Ð¾Ñ‚-Ð²Ð¾Ñ‚ Ð·Ð°ÐºÐ¾Ð½Ñ‡Ð¸Ñ‚ÑÑ, Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð·Ð°Ð¼ÐµÐ½Ð¸Ñ‚Ðµ ÐµÐµ."
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+            }else if(langue==6)
+            {
+                t1.txt="Das Filament ist bald aufgebraucht, bitte ersetzen Sie es"
+                t2.txt="BestÃ¤tigen"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t1.txt="ãƒ•ã‚£ãƒ©ãƒ¡ãƒ³ãƒˆãŒã‚‚ã†ã™ãåˆ‡ã‚Œã¾ã™ã€‚äº¤æ›ã—ã¦ãã ã•ã„"
+                t2.txt="ç¢ºèª"
+            }
+            losspage=40
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Variable (int32) va0
+    Attributes
+        ID   : 5
+        Scope: local
+        Value: 0
+    
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 153
+        Width                   : 249
+        Height                  : 161
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è€—æå³å°†ç”¨å°½è¯·æ›´æ¢è€—æ
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t2
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 85
+        y coordinate            : 319
+        Width                   : 102
+        Height                  : 46
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 0C
+            printh 01
+            printh 00 03
+        
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 80
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 132
+    
+Timer tm0
+    Attributes
+        ID         : 4
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            va0.val++
+            if(va0.val<=30)
+            {
+                beep 500
+            }else
+            {
+                va0.val=0
+                tm0.en=0
+            }
+        
+Timer tm_rest
+    Attributes
+        ID         : 6
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

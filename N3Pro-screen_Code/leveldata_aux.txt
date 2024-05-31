@@ -1,0 +1,2371 @@
+Page leveldata_aux
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 181
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t0.font=0
+            t1.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t1.font=1
+                t3.font=1
+                t0.txt="å¹³å°æµ‹é‡"
+                t1.txt="è¾…åŠ©è°ƒå¹³"
+                t3.txt="è°ƒå¹³"
+            }else if(langue==1)
+            {
+                t0.txt="Measure"
+                t1.txt="Manual"
+                t3.txt="Level"
+            }else if(langue==2)
+            {
+                t0.txt="Medida"
+                t1.txt="Manual"
+                t3.txt="Nivel"
+            }else if(langue==3)
+            {
+                t0.txt="Mesure"
+                t1.txt="Manuel"
+                t3.txt="Niveler"
+            }else if(langue==4)
+            {
+                t0.txt="Misurare"
+                t1.txt="Manuale"
+                t3.txt="Livello"
+            }else if(langue==5)
+            {
+                t0.txt="ÐœÐµÑ€Ð°"
+                t1.txt="Ð ÑƒÐºÐ¾Ð²Ð¾Ð´ÑÑ‚Ð²Ð¾"
+                t3.txt="Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ"
+            }else if(langue==6)
+            {
+                t0.txt="Messen"
+                t1.txt="Handbuch"
+                t3.txt="Niveau"
+            }else if(langue==7)
+            {
+                t0.font=1
+                t1.font=1
+                t3.font=1
+                t0.txt="è¨ˆæ¸¬"
+                t1.txt="ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«"
+                t3.txt="ãƒ¬ãƒ™ãƒªãƒ³ã‚°"
+            }
+            losspage=70
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+XFloat x0
+    Attributes
+        ID                      : 4
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 231
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x1
+    Attributes
+        ID                      : 5
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 199
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x2
+    Attributes
+        ID                      : 6
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 167
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x3
+    Attributes
+        ID                      : 7
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 135
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x4
+    Attributes
+        ID                      : 8
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 103
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x5
+    Attributes
+        ID                      : 9
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 71
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x6
+    Attributes
+        ID                      : 10
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 39
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x7
+    Attributes
+        ID                      : 11
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 6
+        y coordinate            : 452
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x8
+    Attributes
+        ID                      : 12
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 6
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x9
+    Attributes
+        ID                      : 13
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 38
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x10
+    Attributes
+        ID                      : 14
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x11
+    Attributes
+        ID                      : 15
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 102
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x12
+    Attributes
+        ID                      : 16
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 134
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x13
+    Attributes
+        ID                      : 17
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 166
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x14
+    Attributes
+        ID                      : 18
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x15
+    Attributes
+        ID                      : 19
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 433
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x16
+    Attributes
+        ID                      : 20
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x17
+    Attributes
+        ID                      : 21
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x18
+    Attributes
+        ID                      : 22
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 167
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x19
+    Attributes
+        ID                      : 23
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 134
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x20
+    Attributes
+        ID                      : 24
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 103
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x21
+    Attributes
+        ID                      : 25
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x22
+    Attributes
+        ID                      : 26
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 39
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x23
+    Attributes
+        ID                      : 27
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 7
+        y coordinate            : 412
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x24
+    Attributes
+        ID                      : 28
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 7
+        y coordinate            : 393
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x25
+    Attributes
+        ID                      : 29
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 39
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x26
+    Attributes
+        ID                      : 30
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x27
+    Attributes
+        ID                      : 31
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 103
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x28
+    Attributes
+        ID                      : 32
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 134
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x29
+    Attributes
+        ID                      : 33
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 166
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x30
+    Attributes
+        ID                      : 34
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x31
+    Attributes
+        ID                      : 35
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 392
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x32
+    Attributes
+        ID                      : 36
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x33
+    Attributes
+        ID                      : 37
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x34
+    Attributes
+        ID                      : 38
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 167
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x35
+    Attributes
+        ID                      : 39
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 135
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x36
+    Attributes
+        ID                      : 40
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 103
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x37
+    Attributes
+        ID                      : 41
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x38
+    Attributes
+        ID                      : 42
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 38
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x39
+    Attributes
+        ID                      : 43
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 6
+        y coordinate            : 372
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x40
+    Attributes
+        ID                      : 44
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 6
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x41
+    Attributes
+        ID                      : 45
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 38
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x42
+    Attributes
+        ID                      : 46
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x43
+    Attributes
+        ID                      : 47
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 102
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x44
+    Attributes
+        ID                      : 48
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 134
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x45
+    Attributes
+        ID                      : 49
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 166
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x46
+    Attributes
+        ID                      : 50
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x47
+    Attributes
+        ID                      : 51
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 353
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x48
+    Attributes
+        ID                      : 52
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x49
+    Attributes
+        ID                      : 53
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 199
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x50
+    Attributes
+        ID                      : 54
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 166
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x51
+    Attributes
+        ID                      : 55
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 134
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x52
+    Attributes
+        ID                      : 56
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 102
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x53
+    Attributes
+        ID                      : 57
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x54
+    Attributes
+        ID                      : 58
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 38
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x55
+    Attributes
+        ID                      : 59
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 6
+        y coordinate            : 332
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x56
+    Attributes
+        ID                      : 60
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 6
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x57
+    Attributes
+        ID                      : 61
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 38
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x58
+    Attributes
+        ID                      : 62
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 70
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x59
+    Attributes
+        ID                      : 63
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 102
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x60
+    Attributes
+        ID                      : 64
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 134
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x61
+    Attributes
+        ID                      : 65
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 166
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x62
+    Attributes
+        ID                      : 66
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 198
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat x63
+    Attributes
+        ID                      : 67
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 230
+        y coordinate            : 313
+        Width                   : 34
+        Height                  : 15
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 1
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+XFloat z_offset
+    Attributes
+        ID                      : 74
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 92
+        y coordinate            : 189
+        Width                   : 90
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Value                   : 0
+        Significant digits left : 0
+        Significant digits right: 2
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text level_nozzel
+    Attributes
+        ID                      : 71
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 37
+        y coordinate            : 87
+        Width                   : 93
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text level_bed
+    Attributes
+        ID                      : 72
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 150
+        y coordinate            : 84
+        Width                   : 80
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t0
+    Attributes
+        ID                      : 76
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 147
+        y coordinate            : 266
+        Width                   : 99
+        Height                  : 40
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : top
+        Input Type              : character
+        Text                    : å¹³å°æµ‹é‡
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t1
+    Attributes
+        ID                      : 77
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 29
+        y coordinate            : 267
+        Width                   : 103
+        Height                  : 40
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : top
+        Input Type              : character
+        Text                    : è¾…åŠ©è°ƒå¹³
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t3
+    Attributes
+        ID                      : 79
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 45
+        y coordinate            : 12
+        Width                   : 184
+        Height                  : 25
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è°ƒå¹³
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 3
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 123
+        Width            : 252
+        Height           : 56
+        Effect           : load
+        Picture ID       : 66
+    
+Hotspot m6
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 147
+        y coordinate     : 239
+        Width            : 101
+        Height           : 56
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            page tips_level
+        
+Hotspot m0
+    Attributes
+        ID               : 2
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 32
+        y coordinate     : 238
+        Width            : 101
+        Height           : 56
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            page warn_aux
+        
+Hotspot m1
+    Attributes
+        ID               : 68
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 17
+        y coordinate     : 128
+        Width            : 73
+        Height           : 44
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 04
+            p0.pic=65
+        
+Hotspot m2
+    Attributes
+        ID               : 69
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 100
+        y coordinate     : 129
+        Width            : 73
+        Height           : 44
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 05
+            p0.pic=66
+        
+Hotspot m3
+    Attributes
+        ID               : 70
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 186
+        y coordinate     : 127
+        Width            : 73
+        Height           : 44
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 06
+            p0.pic=67
+        
+Hotspot m4
+    Attributes
+        ID               : 73
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 24
+        y coordinate     : 182
+        Width            : 54
+        Height           : 40
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 02
+        
+Hotspot m5
+    Attributes
+        ID               : 75
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 197
+        y coordinate     : 181
+        Width            : 50
+        Height           : 40
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 03
+        
+Hotspot m7
+    Attributes
+        ID               : 80
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 3
+        y coordinate     : 3
+        Width            : 85
+        Height           : 36
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 40
+            printh 01
+            printh 00 01
+            page main
+        
+Timer tm0
+    Attributes
+        ID         : 78
+        Scope      : local
+        Period (ms): 50
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            leveldata_aux.level_nozzel.txt=main.nozzletemp.txt
+            leveldata_aux.level_bed.txt=main.bedtemp.txt
+            leveldata_aux.z_offset.val=leveldata.z_offset.val
+            if(adjustzoffset.zoffset_value.val==1)
+            {
+                adjustzoffset.p0.pic=65
+                leveldata_aux.p0.pic=65
+            }else if(adjustzoffset.zoffset_value.val==2)
+            {
+                adjustzoffset.p0.pic=66
+                leveldata_aux.p0.pic=66
+            }else if(adjustzoffset.zoffset_value.val==3)
+            {
+                adjustzoffset.p0.pic=67
+                leveldata_aux.p0.pic=67
+            }else
+            {
+                adjustzoffset.p0.pic=66
+                leveldata_aux.p0.pic=66
+            }
+        
+Timer tm_rest
+    Attributes
+        ID         : 81
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

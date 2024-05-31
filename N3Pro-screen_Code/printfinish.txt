@@ -1,0 +1,306 @@
+Page printfinish
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 48
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ‰“å°å®Œæˆï¼"
+                t2.txt="å†æ‰“ä¸€æ¬¡"
+                t3.txt="è¿”å›ž"
+            }else if(langue==1)
+            {
+                t1.txt="Done print!"
+                t2.txt="Print again"
+                t3.txt="Return"
+            }else if(langue==2)
+            {
+                t1.txt="ImpresiÃ³n completa!"
+                t2.txt="Volver a imprimir"
+                t3.txt="Devolver"
+            }else if(langue==3)
+            {
+                t1.txt="L'impression est terminÃ©e !"
+                t2.txt="Imprimer Ã  nouveau"
+                t3.txt="Revenir"
+            }else if(langue==4)
+            {
+                t1.txt="Stampa fatta!"
+                t2.txt="Stampa di nuovo"
+                t3.txt="Ritorno"
+            }else if(langue==5)
+            {
+                t1.txt="Ð“Ð¾Ñ‚Ð¾Ð²Ð¾ Ð¿ÐµÑ‡Ð°Ñ‚Ð°Ñ‚ÑŒ!"
+                t2.txt="Ð Ð°ÑÐ¿ÐµÑ‡Ð°Ñ‚Ð°Ñ‚ÑŒ ÑÐ½Ð¾Ð²Ð°"
+                t3.txt="Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°Ñ‚ÑŒÑÑ"
+            }else if(langue==6)
+            {
+                t1.txt="Der Druck ist fertig!"
+                t2.txt="Drucken Sie erneut"
+                t3.txt="ZurÃ¼ckkehren"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="ãƒ—ãƒªãƒ³ãƒˆå®Œäº†!"
+                t2.txt="ã‚‚ã†ä¸€åº¦å°åˆ·ã™ã‚‹"
+                t3.txt="æˆ»ã‚‹"
+            }
+            printfinish.t0.txt=printpause.t0.txt
+            printfinish.t4.txt=printpause.printtime.txt
+            losspage=24
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t3
+    Attributes
+        ID                      : 1
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 25
+        y coordinate            : 274
+        Width                   : 105
+        Height                  : 43
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : è¿”å›ž
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t2
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 143
+        y coordinate            : 273
+        Width                   : 103
+        Height                  : 44
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : é‡æ–°æ‰“å°
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t0
+    Attributes
+        ID                      : 3
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 10
+        y coordinate            : 202
+        Width                   : 250
+        Height                  : 36
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t1
+    Attributes
+        ID                      : 4
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 10
+        y coordinate            : 178
+        Width                   : 251
+        Height                  : 25
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ‰“å°å®Œæˆ
+        Max. Text Size          : 32
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t4
+    Attributes
+        ID                      : 5
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 10
+        y coordinate            : 239
+        Width                   : 250
+        Height                  : 26
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 64
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Hotspot m1
+    Attributes
+        ID               : 6
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 26
+        y coordinate     : 271
+        Width            : 105
+        Height           : 46
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            page main
+        
+Hotspot m0
+    Attributes
+        ID               : 7
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 141
+        y coordinate     : 269
+        Width            : 105
+        Height           : 46
+        Effect           : load
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 21 98
+            printh 01
+            printh 00 01
+        
+Timer tm_rest
+    Attributes
+        ID         : 8
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

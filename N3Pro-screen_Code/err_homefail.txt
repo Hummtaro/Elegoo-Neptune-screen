@@ -1,0 +1,92 @@
+Page err_homefail
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            com_stop
+            dim=100
+            t1.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t1.txt="å›žåŽŸç‚¹å¤±è´¥"
+            }else if(langue==1)
+            {
+                t1.txt="Home Failed"
+            }else if(langue==2)
+            {
+                t1.txt="Vuelta al origen fallida"
+            }else if(langue==3)
+            {
+                t1.txt="Le retour Ã  l'origine a Ã©chouÃ©"
+            }else if(langue==4)
+            {
+                t1.txt="Ritorno all'origine fallito"
+            }else if(langue==5)
+            {
+                t1.txt="ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð²ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ Ð² Ð¸ÑÑ…Ð¾Ð´Ð½Ð¾Ðµ Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ"
+            }else if(langue==6)
+            {
+                t1.txt="RÃ¼ckkehr zum Ursprung fehlgeschlagen"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t1.txt="åŽŸç‚¹å¾©å¸°å¤±æ•—"
+            }
+            losspage=1
+            wepo losspage,5
+        
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 11
+        y coordinate            : 156
+        Width                   : 249
+        Height                  : 214
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å›žåŽŸç‚¹å¤±è´¥
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 62
+        Width            : 252
+        Height           : 312
+        Effect           : load
+        Picture ID       : 87
+    

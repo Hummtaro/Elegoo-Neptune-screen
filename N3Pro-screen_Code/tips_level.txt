@@ -1,0 +1,274 @@
+Page tips_level
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ˜¯å¦æ ¡å‡†å¹³å°"
+                t2.txt="ç¡®è®¤"
+                t3.txt="å–æ¶ˆ"
+            }else if(langue==1)
+            {
+                t1.txt="Calibrate the bed?"
+                t2.txt="Confirm"
+                t3.txt="Cancel"
+            }else if(langue==2)
+            {
+                t1.txt="Â¿EstÃ¡ calibrada la plataforma?"
+                t2.txt="Confirmar"
+                t3.txt="Cancelar"
+            }else if(langue==3)
+            {
+                t1.txt="La plateforme est-elle calibrÃ©e ?"
+                t2.txt="Confirmer"
+                t3.txt="Annuler"
+            }else if(langue==4)
+            {
+                t1.txt="Calibrare il letto?"
+                t2.txt="Conferma"
+                t3.txt="Annulla"
+            }else if(langue==5)
+            {
+                t1.txt="ÐžÑ‚ÐºÐ°Ð»Ð¸Ð±Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ ÐºÑ€Ð¾Ð²Ð°Ñ‚ÑŒ?"
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t3.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+            }else if(langue==6)
+            {
+                t1.txt="Die Plattform kalibriert?"
+                t2.txt="BestÃ¤tigen"
+                t3.txt="Stornieren"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ã‚’ã‚­ãƒ£ãƒªãƒ–ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³ã—ã¾ã™ã‹ï¼Ÿ"
+                t2.txt="ç¢ºèª"
+                t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+            }
+            losspage=15
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 9
+        y coordinate            : 147
+        Width                   : 250
+        Height                  : 167
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ˜¯å¦æ ¡å‡†å¹³å°
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t2
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 28
+        y coordinate            : 322
+        Width                   : 101
+        Height                  : 45
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 09
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            //æ ¹æ®æœºåž‹ç¡®å®šè°ƒå¹³ç‚¹æ•°
+            if(main.va0.val==1) //Pro
+            {
+                leveling.va1.val=1
+                page leveling_36
+            }else if(main.va0.val==2) //PLUS
+            {
+                leveling.va1.val=2
+                page leveling_49
+            }else if(main.va0.val==3) //MAX
+            {
+                leveling.va1.val=3
+                page leveling_63
+            }else
+            {
+                leveling.va1.val=1
+                page leveling_36
+            }
+        
+Text t3
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 144
+        y coordinate            : 322
+        Width                   : 96
+        Height                  : 44
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å–æ¶ˆ
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            if(main.va0.val==1) //Pro
+            {
+                page leveldata_36
+            }else if(main.va0.val==2) //PLUS
+            {
+                page aux49_data
+            }else if(main.va0.val==3) //MAX
+            {
+                page aux63_data
+            }else
+            {
+                page leveldata_36
+            }
+        
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 80
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 49
+    
+Timer tm_rest
+    Attributes
+        ID         : 5
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

@@ -1,0 +1,142 @@
+Page err_nozzleover
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            com_stop
+            dim=100
+            t0.font=0
+            t1.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t1.font=1
+                t0.txt="å–·å¤´è¶…è¿‡æœ€å¤§æ¸©åº¦é™åˆ¶"
+                t1.txt="è¯·æ£€æŸ¥å–·å¤´çƒ­æ•æŽ¥å£æ˜¯å¦çŸ­æŽ¥"
+            }else if(langue==1)
+            {
+                t0.txt="Nozzle is too highterature"
+                t1.txt="Please check the thermistor\r interface of the nozzle is\r short-circuited or not."
+            }else if(langue==2)
+            {
+                t0.txt="La boquilla tiene una temperatura demasiado alta"
+                t1.txt="Compruebe que el conector del termistor de la cama caliente no estÃ¡ en cortocircuito."
+            }else if(langue==3)
+            {
+                t0.txt="La tempÃ©rature de la buse est trop haute"
+                t1.txt="veuillez vÃ©rifier si l'interface thermique de la buse est en court-circuit."
+            }else if(langue==4)
+            {
+                t0.txt="Ugello ha una temperatura troppo alta"
+                t1.txt="Controllare che lâ€™ interfaccia termistore dellâ€™ ugello sia cortocircuita o meno. "
+            }else if(langue==5)
+            {
+                t0.txt="Ð¢ÐµÐ¿Ð»Ð¾Ð²Ð°Ñ Ð¿Ð»Ð°Ñ‚Ñ„Ð¾Ñ€Ð¼Ð° Ð¸Ð¼ÐµÐµÑ‚ ÑÐ»Ð¸ÑˆÐºÐ¾Ð¼ Ð½Ð¸Ð·ÐºÑƒÑŽ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ñƒ"
+                t1.txt="Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑŒÑ‚Ðµ, ÑÐ²Ð»ÑÐµÑ‚ÑÑ Ð»Ð¸ Ñ‚ÐµÑ€Ð¼Ð¸ÑÑ‚Ð¾Ñ€Ð½Ñ‹Ð¹ Ð¸Ð½Ñ‚ÐµÑ€Ñ„ÐµÐ¹Ñ Ñ‚ÐµÐ¿Ð»Ð¾Ð²Ð¾Ð¹ Ð¿Ð»Ð°Ñ‚Ñ„Ð¾Ñ€Ð¼Ñ‹ ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¾Ð³Ð¾ Ð·Ð°Ð¼Ñ‹ÐºÐ°Ð½Ð¸Ñ."
+            }else if(langue==6)
+            {
+                t0.txt="Die Temperatur des Heizbetts ist zu niedrig"
+                t1.txt="Bitte Ã¼berprÃ¼fen Sie, ob die Thermistorschnittstelle des Heizbetts getrennt ist."
+            }else if(langue==7)
+            {
+                t0.font=1
+                t1.font=1
+                t0.txt="ãƒŽã‚ºãƒ«ã®æ¸©åº¦ãŒé«˜ã™ãŽã‚‹"
+                t1.txt="ãƒŽã‚ºãƒ«ã®ã‚µãƒ¼ãƒŸã‚¹ã‚¿ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ãŒçŸ­çµ¡ã—ã¦ã„ãªã„ã‹ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚"
+            }
+            losspage=1
+            wepo losspage,5
+        
+Text t0
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 11
+        y coordinate            : 166
+        Width                   : 250
+        Height                  : 70
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : bottom
+        Input Type              : character
+        Text                    : Nozzle is too higherature
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t1
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 240
+        Width                   : 249
+        Height                  : 146
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : Please check the thermistor \r\ninterface of the nozzle is \r\nshort-circuited or not.
+        Max. Text Size          : 512
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 74
+        Width            : 252
+        Height           : 312
+        Effect           : load
+        Picture ID       : 87
+    
+Timer tm0
+    Attributes
+        ID         : 2
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            beep 500
+        

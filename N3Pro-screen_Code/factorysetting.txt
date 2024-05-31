@@ -1,0 +1,422 @@
+Page factorysetting
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ˜¯å¦æ¢å¤å‡ºåŽ‚è®¾ç½®"
+                t2.txt="ç¡®è®¤"
+                t3.txt="å–æ¶ˆ"
+            }else if(langue==1)
+            {
+                t1.txt="Factory Default Settings\r          Recovery?"
+                t2.txt="Confirm"
+                t3.txt="Cancel"
+            }else if(langue==2)
+            {
+                t1.txt="Restaurar la ConfiguraciÃ³n de FÃ¡brica"
+                t2.txt="Confirmar"
+                t3.txt="Cancelar"
+            }else if(langue==3)
+            {
+                t1.txt="Restaurer les paramÃ¨tres d'usine"
+                t2.txt="Confirmer"
+                t3.txt="Annuler"
+            }else if(langue==4)
+            {
+                t1.txt="Impostazioni di fabbrica"
+                t2.txt="Conferma"
+                t3.txt="Annulla"
+            }else if(langue==5)
+            {
+                t1.txt="Ð—Ð°Ð²Ð¾Ð´ÑÐºÐ¸Ðµ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ Ð¿Ð¾ ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ"
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t3.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+            }else if(langue==6)
+            {
+                t1.txt="Werkseinstellungen zurÃ¼cksetzen"
+                t2.txt="BestÃ¤tigen"
+                t3.txt="Stornieren"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="å·¥å ´å‡ºè·æ™‚ã®è¨­å®šã«æˆ»ã™"
+                t2.txt="ç¢ºèª"
+                t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+            }
+            losspage=10
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 27
+        y coordinate            : 146
+        Width                   : 223
+        Height                  : 176
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : æ˜¯å¦æ¢å¤å‡ºåŽ‚è®¾ç½®
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t2
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 31
+        y coordinate            : 323
+        Width                   : 103
+        Height                  : 43
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : ç¡®è®¤
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 98
+            printh 01
+            printh 00 F1
+            wait.tm0.en=1
+            //åˆå§‹åŒ–eeprom
+            for(sys0=0;sys0<1020;sys0+=4)
+            {
+                wepo 0,sys0
+            }
+            //è®¾ç½®é»˜è®¤å€¼
+            langue=1     //é»˜è®¤è¯­è¨€
+            losspage=1  //é»˜è®¤æ¢å¤ä¸»é¡µ
+            en_beep=1   //é»˜è®¤æœ‰æŒ‰é”®å£°éŸ³
+            printpause.t0.txt="" //é»˜è®¤æ‰“å°æ–‡ä»¶å
+            restFlag2=0
+            restFlag1=0
+            printpause.printprocess.val=0
+            printpause.printvalue.txt=""
+            leveling.va1.val=0
+            //main.va0.val=0
+            en_dim=0
+            //å†™é»˜è®¤å€¼
+            wepo langue,0
+            wepo losspage,5
+            wepo printpause.t0.txt,10
+            wepo en_beep,50
+            wepo restFlag2,100
+            wepo restFlag1,105
+            wepo printpause.printprocess.val,110
+            wepo printpause.printvalue.txt,115
+            wepo leveling.va1.val,120
+            //wepo main.va0.val,125
+            wepo en_dim,130
+            //å†™æ ‡å¿—å€¼
+            wepo 0x12345678,1020
+            if(leveling.va1.val==1)
+            {
+                leveldata_36.x0.val=0
+                leveldata_36.x1.val=0
+                leveldata_36.x2.val=0
+                leveldata_36.x3.val=0
+                leveldata_36.x4.val=0
+                leveldata_36.x5.val=0
+                leveldata_36.x6.val=0
+                leveldata_36.x7.val=0
+                leveldata_36.x8.val=0
+                leveldata_36.x9.val=0
+                leveldata_36.x10.val=0
+                leveldata_36.x11.val=0
+                leveldata_36.x12.val=0
+                leveldata_36.x13.val=0
+                leveldata_36.x14.val=0
+                leveldata_36.x15.val=0
+                leveldata_36.x16.val=0
+                leveldata_36.x17.val=0
+                leveldata_36.x18.val=0
+                leveldata_36.x19.val=0
+                leveldata_36.x20.val=0
+                leveldata_36.x21.val=0
+                leveldata_36.x22.val=0
+                leveldata_36.x23.val=0
+                leveldata_36.x24.val=0
+                leveldata_36.x25.val=0
+                leveldata_36.x26.val=0
+                leveldata_36.x27.val=0
+                leveldata_36.x28.val=0
+                leveldata_36.x29.val=0
+                leveldata_36.x30.val=0
+                leveldata_36.x31.val=0
+                leveldata_36.x32.val=0
+                leveldata_36.x33.val=0
+                leveldata_36.x34.val=0
+                leveldata_36.x35.val=0
+            }else if(leveling.va1.val==2) //PLUS
+            {
+                aux49_data.x0.val=0
+                aux49_data.x1.val=0
+                aux49_data.x2.val=0
+                aux49_data.x3.val=0
+                aux49_data.x4.val=0
+                aux49_data.x5.val=0
+                aux49_data.x6.val=0
+                aux49_data.x7.val=0
+                aux49_data.x8.val=0
+                aux49_data.x9.val=0
+                aux49_data.x10.val=0
+                aux49_data.x11.val=0
+                aux49_data.x12.val=0
+                aux49_data.x13.val=0
+                aux49_data.x14.val=0
+                aux49_data.x15.val=0
+                aux49_data.x16.val=0
+                aux49_data.x17.val=0
+                aux49_data.x18.val=0
+                aux49_data.x19.val=0
+                aux49_data.x20.val=0
+                aux49_data.x21.val=0
+                aux49_data.x22.val=0
+                aux49_data.x23.val=0
+                aux49_data.x24.val=0
+                aux49_data.x25.val=0
+                aux49_data.x26.val=0
+                aux49_data.x27.val=0
+                aux49_data.x28.val=0
+                aux49_data.x29.val=0
+                aux49_data.x30.val=0
+                aux49_data.x31.val=0
+                aux49_data.x32.val=0
+                aux49_data.x33.val=0
+                aux49_data.x34.val=0
+                aux49_data.x35.val=0
+                aux49_data.x36.val=0
+                aux49_data.x37.val=0
+                aux49_data.x38.val=0
+                aux49_data.x39.val=0
+                aux49_data.x40.val=0
+                aux49_data.x42.val=0
+                aux49_data.x43.val=0
+                aux49_data.x44.val=0
+                aux49_data.x45.val=0
+                aux49_data.x46.val=0
+                aux49_data.x47.val=0
+                aux49_data.x48.val=0
+            }else if(leveling.va1.val==3) //MAX
+            {
+                aux63_data.x0.val=0
+                aux63_data.x1.val=0
+                aux63_data.x2.val=0
+                aux63_data.x3.val=0
+                aux63_data.x4.val=0
+                aux63_data.x5.val=5
+                aux63_data.x6.val=0
+                aux63_data.x7.val=0
+                aux63_data.x8.val=0
+                aux63_data.x9.val=0
+                aux63_data.x10.val=0
+                aux63_data.x11.val=0
+                aux63_data.x12.val=0
+                aux63_data.x13.val=0
+                aux63_data.x14.val=0
+                aux63_data.x15.val=0
+                aux63_data.x16.val=0
+                aux63_data.x17.val=0
+                aux63_data.x18.val=0
+                aux63_data.x19.val=0
+                aux63_data.x20.val=0
+                aux63_data.x21.val=0
+                aux63_data.x22.val=0
+                aux63_data.x23.val=0
+                aux63_data.x24.val=0
+                aux63_data.x25.val=0
+                aux63_data.x26.val=0
+                aux63_data.x27.val=0
+                aux63_data.x28.val=0
+                aux63_data.x29.val=0
+                aux63_data.x30.val=0
+                aux63_data.x31.val=0
+                aux63_data.x32.val=0
+                aux63_data.x33.val=0
+                aux63_data.x34.val=0
+                aux63_data.x35.val=0
+                aux63_data.x36.val=0
+                aux63_data.x37.val=0
+                aux63_data.x38.val=0
+                aux63_data.x39.val=0
+                aux63_data.x40.val=0
+                aux63_data.x42.val=0
+                aux63_data.x43.val=0
+                aux63_data.x44.val=0
+                aux63_data.x45.val=0
+                aux63_data.x46.val=0
+                aux63_data.x47.val=0
+                aux63_data.x48.val=0
+                aux63_data.x49.val=0
+                aux63_data.x50.val=0
+                aux63_data.x51.val=0
+                aux63_data.x52.val=0
+                aux63_data.x53.val=0
+                aux63_data.x54.val=0
+                aux63_data.x55.val=0
+                aux63_data.x56.val=0
+                aux63_data.x57.val=0
+                aux63_data.x58.val=0
+                aux63_data.x59.val=0
+                aux63_data.x60.val=0
+                aux63_data.x61.val=0
+                aux63_data.x62.val=0
+            }
+            page wait
+        
+Text t3
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 148
+        y coordinate            : 323
+        Width                   : 97
+        Height                  : 43
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å–æ¶ˆ
+        Max. Text Size          : 32
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            page set
+            printh 5A A5 06 83 10 98 01 00 F0
+        
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 80
+        Width            : 253
+        Height           : 313
+        Effect           : load
+        Picture ID       : 49
+    
+Timer tm_rest
+    Attributes
+        ID         : 5
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

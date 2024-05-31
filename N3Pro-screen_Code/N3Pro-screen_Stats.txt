@@ -1,0 +1,330 @@
+Program.s
+	0    Component(s)
+	66   Line(s) of event code
+	65   Unique line(s) of event code
+leveling_49
+	56   Component(s)
+	129  Line(s) of event code
+	92   Unique line(s) of event code
+leveldata_36
+	54   Component(s)
+	185  Line(s) of event code
+	64   Unique line(s) of event code
+prefilament
+	28   Component(s)
+	232  Line(s) of event code
+	113  Unique line(s) of event code
+leveldata_49
+	67   Component(s)
+	185  Line(s) of event code
+	63   Unique line(s) of event code
+aux49_data
+	71   Component(s)
+	223  Line(s) of event code
+	94   Unique line(s) of event code
+printpause
+	45   Component(s)
+	392  Line(s) of event code
+	148  Unique line(s) of event code
+leveldata_aux
+	82   Component(s)
+	212  Line(s) of event code
+	83   Unique line(s) of event code
+aux63_data
+	85   Component(s)
+	223  Line(s) of event code
+	94   Unique line(s) of event code
+leveling_16
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+leveling_64
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+warn_rdlevel
+	6    Component(s)
+	103  Line(s) of event code
+	60   Unique line(s) of event code
+err_homefail
+	3    Component(s)
+	32   Line(s) of event code
+	24   Unique line(s) of event code
+noFilamentPush
+	7    Component(s)
+	91   Line(s) of event code
+	56   Unique line(s) of event code
+pauseconfirm
+	6    Component(s)
+	106  Line(s) of event code
+	64   Unique line(s) of event code
+motorsetting
+	7    Component(s)
+	88   Line(s) of event code
+	52   Unique line(s) of event code
+wait
+	4    Component(s)
+	45   Line(s) of event code
+	32   Unique line(s) of event code
+leveldata_25
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+leveldata_64
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+leveldata_16
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+aux64_data
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+leveling_25
+	1    Component(s)
+	0    Line(s) of event code
+	0    Unique line(s) of event code
+err_bedheat
+	5    Component(s)
+	44   Line(s) of event code
+	35   Unique line(s) of event code
+heatfilament
+	9    Component(s)
+	99   Line(s) of event code
+	57   Unique line(s) of event code
+askprint
+	8    Component(s)
+	116  Line(s) of event code
+	62   Unique line(s) of event code
+nofilament
+	8    Component(s)
+	112  Line(s) of event code
+	68   Unique line(s) of event code
+ledcontrl
+	7    Component(s)
+	97   Line(s) of event code
+	57   Unique line(s) of event code
+resumeconfirm
+	6    Component(s)
+	103  Line(s) of event code
+	61   Unique line(s) of event code
+err_nozzleover
+	5    Component(s)
+	44   Line(s) of event code
+	35   Unique line(s) of event code
+motorsetvalue
+	13   Component(s)
+	150  Line(s) of event code
+	50   Unique line(s) of event code
+err_bedover
+	5    Component(s)
+	44   Line(s) of event code
+	35   Unique line(s) of event code
+err_nozzleheat
+	5    Component(s)
+	44   Line(s) of event code
+	35   Unique line(s) of event code
+boot
+	10   Component(s)
+	48   Line(s) of event code
+	38   Unique line(s) of event code
+err_sd
+	7    Component(s)
+	66   Line(s) of event code
+	40   Unique line(s) of event code
+autohome
+	8    Component(s)
+	58   Line(s) of event code
+	39   Unique line(s) of event code
+err_sdread
+	7    Component(s)
+	66   Line(s) of event code
+	40   Unique line(s) of event code
+cancleheat
+	6    Component(s)
+	109  Line(s) of event code
+	61   Unique line(s) of event code
+err_probefail
+	6    Component(s)
+	83   Line(s) of event code
+	50   Unique line(s) of event code
+nosdcard
+	8    Component(s)
+	119  Line(s) of event code
+	69   Unique line(s) of event code
+aux2autolevel
+	9    Component(s)
+	293  Line(s) of event code
+	215  Unique line(s) of event code
+warn_zoffset
+	10   Component(s)
+	103  Line(s) of event code
+	58   Unique line(s) of event code
+leveling
+	9    Component(s)
+	83   Line(s) of event code
+	46   Unique line(s) of event code
+warn_aux
+	9    Component(s)
+	136  Line(s) of event code
+	78   Unique line(s) of event code
+err_heatfail
+	5    Component(s)
+	44   Line(s) of event code
+	35   Unique line(s) of event code
+err_sdwrite
+	7    Component(s)
+	66   Line(s) of event code
+	40   Unique line(s) of event code
+tempsetvalue
+	20   Component(s)
+	193  Line(s) of event code
+	62   Unique line(s) of event code
+err_nozzleunde
+	8    Component(s)
+	86   Line(s) of event code
+	56   Unique line(s) of event code
+warn1_filament
+	6    Component(s)
+	105  Line(s) of event code
+	63   Unique line(s) of event code
+speedsetting
+	10   Component(s)
+	127  Line(s) of event code
+	71   Unique line(s) of event code
+err_bedunder
+	8    Component(s)
+	86   Line(s) of event code
+	56   Unique line(s) of event code
+factorysetting
+	6    Component(s)
+	278  Line(s) of event code
+	234  Unique line(s) of event code
+continueprint
+	9    Component(s)
+	124  Line(s) of event code
+	69   Unique line(s) of event code
+tips_level
+	6    Component(s)
+	132  Line(s) of event code
+	72   Unique line(s) of event code
+filamentcheck
+	10   Component(s)
+	102  Line(s) of event code
+	58   Unique line(s) of event code
+file2
+	18   Component(s)
+	204  Line(s) of event code
+	75   Unique line(s) of event code
+information
+	16   Component(s)
+	142  Line(s) of event code
+	101  Unique line(s) of event code
+warn2_filament
+	6    Component(s)
+	108  Line(s) of event code
+	61   Unique line(s) of event code
+printfinish
+	9    Component(s)
+	99   Line(s) of event code
+	62   Unique line(s) of event code
+tempset
+	14   Component(s)
+	155  Line(s) of event code
+	56   Unique line(s) of event code
+file5
+	18   Component(s)
+	197  Line(s) of event code
+	74   Unique line(s) of event code
+main
+	28   Component(s)
+	240  Line(s) of event code
+	145  Unique line(s) of event code
+file4
+	18   Component(s)
+	204  Line(s) of event code
+	76   Unique line(s) of event code
+hardwaretest
+	22   Component(s)
+	169  Line(s) of event code
+	66   Unique line(s) of event code
+adjusttemp
+	39   Component(s)
+	410  Line(s) of event code
+	162  Unique line(s) of event code
+leveling_63
+	70   Component(s)
+	143  Line(s) of event code
+	106  Unique line(s) of event code
+level_aux
+	22   Component(s)
+	230  Line(s) of event code
+	98   Unique line(s) of event code
+language
+	20   Component(s)
+	420  Line(s) of event code
+	88   Unique line(s) of event code
+file1
+	18   Component(s)
+	199  Line(s) of event code
+	75   Unique line(s) of event code
+file3
+	18   Component(s)
+	204  Line(s) of event code
+	76   Unique line(s) of event code
+pretemp
+	35   Component(s)
+	284  Line(s) of event code
+	105  Unique line(s) of event code
+filamentresume
+	16   Component(s)
+	194  Line(s) of event code
+	101  Unique line(s) of event code
+multiset
+	21   Component(s)
+	239  Line(s) of event code
+	128  Unique line(s) of event code
+adjustspeed
+	25   Component(s)
+	336  Line(s) of event code
+	126  Unique line(s) of event code
+languageset
+	20   Component(s)
+	331  Line(s) of event code
+	88   Unique line(s) of event code
+leveldata
+	34   Component(s)
+	247  Line(s) of event code
+	97   Unique line(s) of event code
+leveling_36
+	43   Component(s)
+	116  Line(s) of event code
+	79   Unique line(s) of event code
+keybdB
+	40   Component(s)
+	317  Line(s) of event code
+	152  Unique line(s) of event code
+speedsetvalue
+	35   Component(s)
+	288  Line(s) of event code
+	99   Unique line(s) of event code
+adjustzoffset
+	33   Component(s)
+	387  Line(s) of event code
+	171  Unique line(s) of event code
+premove
+	41   Component(s)
+	401  Line(s) of event code
+	123  Unique line(s) of event code
+set
+	34   Component(s)
+	349  Line(s) of event code
+	184  Unique line(s) of event code
+
+Total
+	80   Page(s)
+	1496 Component(s)
+	12285 Line(s) of event code
+	2557 Unique line(s) of event code

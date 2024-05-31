@@ -1,0 +1,650 @@
+Page hardwaretest
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 2
+    
+Variable (int32) count1
+    Attributes
+        ID   : 11
+        Scope: local
+        Value: 0
+    
+Variable (int32) count2
+    Attributes
+        ID   : 13
+        Scope: local
+        Value: 0
+    
+Variable (int32) count3
+    Attributes
+        ID   : 20
+        Scope: local
+        Value: 0
+    
+Text nozzletemp
+    Attributes
+        ID                      : 14
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 162
+        y coordinate            : 104
+        Width                   : 93
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text bedtemp
+    Attributes
+        ID                      : 15
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 161
+        y coordinate            : 168
+        Width                   : 94
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 20
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture led2
+    Attributes
+        ID               : 16
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 198
+        y coordinate     : 299
+        Width            : 24
+        Height           : 24
+        Effect           : load
+        Picture ID       : 165
+    
+Picture p1
+    Attributes
+        ID               : 17
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 185
+        y coordinate     : 353
+        Width            : 48
+        Height           : 48
+        Effect           : load
+        Picture ID       : 155
+    
+Picture fanstatue
+    Attributes
+        ID               : 18
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 191
+        y coordinate     : 235
+        Width            : 39
+        Height           : 20
+        Effect           : load
+        Picture ID       : 76
+    
+Dual-state Button x
+    Attributes
+        ID                        : 1
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 5
+        y coordinate              : 21
+        Width                     : 60
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : Xé™ä½
+        Max. Text Size            : 10
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button y
+    Attributes
+        ID                        : 2
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 74
+        y coordinate              : 21
+        Width                     : 60
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : Yé™ä½
+        Max. Text Size            : 10
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button z
+    Attributes
+        ID                        : 3
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 143
+        y coordinate              : 21
+        Width                     : 60
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : Zé™ä½
+        Max. Text Size            : 10
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button mtd
+    Attributes
+        ID                        : 4
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 209
+        y coordinate              : 21
+        Width                     : 60
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : æ–­æ–™æ£€æµ‹
+        Max. Text Size            : 20
+        Word wrap                 : enabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button nozzle
+    Attributes
+        ID                        : 5
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 5
+        y coordinate              : 89
+        Width                     : 139
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : å–·å¤´åŠ çƒ­
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button bed
+    Attributes
+        ID                        : 6
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 5
+        y coordinate              : 153
+        Width                     : 139
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : çƒ­åºŠåŠ çƒ­
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button fan
+    Attributes
+        ID                        : 7
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 5
+        y coordinate              : 218
+        Width                     : 139
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : æ¨¡åž‹é£Žæ‰‡
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button bt7
+    Attributes
+        ID                        : 8
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 168
+        y coordinate              : 417
+        Width                     : 101
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 1024
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : ç»“æŸæµ‹è¯•
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Press Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 08
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 09
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 0A
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 0B
+            page main
+        
+Dual-state Button motor1
+    Attributes
+        ID                        : 9
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 7
+        y coordinate              : 347
+        Width                     : 63
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : æ­£è½¬
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button led
+    Attributes
+        ID                        : 10
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 5
+        y coordinate              : 282
+        Width                     : 139
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : ç…§æ˜Žç¯
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Dual-state Button motor2
+    Attributes
+        ID                        : 19
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 79
+        y coordinate              : 347
+        Width                     : 63
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 50712
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 0
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : åè½¬
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+Timer tm0
+    Attributes
+        ID         : 12
+        Scope      : local
+        Period (ms): 100
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            count1.val++
+            count2.val++
+            count3.val++
+            //é£Žæ‰‡æŽ§åˆ¶
+            if(set.va0.val==0)
+            {
+                hardwaretest.fanstatue.pic=76
+            }else if(set.va0.val==1)
+            {
+                hardwaretest.fanstatue.pic=77
+            }
+            //LEDæŽ§åˆ¶
+            if(status_led2==1)
+            {
+                hardwaretest.led2.pic=164
+            }else if(status_led2==0)
+            {
+                hardwaretest.led2.pic=165
+            }
+            //è¾“å…¥å¼•è„š
+            if(count1.val==1) //èŽ·å–Xé™ä½çŠ¶æ€
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 00
+                p1.pic=155
+            }else if(count1.val==2) //èŽ·å–Yé™ä½çŠ¶æ€
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 01
+                p1.pic=156
+            }else if(count1.val==3) //èŽ·å–Zé™ä½çŠ¶æ€
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 02
+                p1.pic=157
+            }else if(count1.val==4) //èŽ·å–mtdçŠ¶æ€
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 03
+                count1.val=0
+            }
+            //è¾“å‡ºå¼•è„š
+            if(count2.val==5) //å–·å¤´åŠ çƒ­
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 04
+            }else if(count2.val==10) //çƒ­åºŠåŠ çƒ­
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 05
+            }else if(count2.val==15) //å¼€æ¨¡åž‹é£Žæ‰‡
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 06
+            }else if(count2.val==20) //å¼€ç…§æ˜Žç¯
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 07
+            }else if(count2.val==50) //å…³å–·å¤´
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 08
+            }else if(count2.val==55) //å…³çƒ­åºŠ
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 09
+            }else if(count2.val==60) //å…³æ¨¡åž‹é£Žæ‰‡
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 0A
+            }else if(count2.val==65) //å…³ç…§æ˜Žç¯
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 0B
+            }else if(count2.val==70)
+            {
+                count2.val=0
+            }
+            //ç”µæœºæŽ§åˆ¶
+            if(count3.val==5)//æ­£è½¬
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 0C
+            }else if(count3.val==10)//åè½¬
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 22 02
+                printh 01
+                printh 00 0D
+            }else if(count3.val==16)
+            {
+                count3.val=0
+            }
+        
+Timer tm1
+    Attributes
+        ID         : 21
+        Scope      : local
+        Period (ms): 50
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            hardwaretest.nozzletemp.txt=main.nozzletemp.txt
+            hardwaretest.bedtemp.txt=main.bedtemp.txt
+        

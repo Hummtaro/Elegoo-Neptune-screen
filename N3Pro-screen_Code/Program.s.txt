@@ -1,0 +1,80 @@
+Program.s
+    //ä»¥ä¸‹ä»£ç åªåœ¨ä¸Šç”µæ—¶è¿è¡Œä¸€æ¬¡,ä¸€èˆ¬ç”¨äºŽå…¨å±€å˜é‡å®šä¹‰å’Œä¸Šç”µåˆå§‹åŒ–æ•°æ®
+    //å…¨å±€å˜é‡å®šä¹‰ç›®å‰ä»…æ”¯æŒ4å­—èŠ‚æœ‰ç¬¦å·æ•´å½¢(int),ä¸æ”¯æŒå…¶ä»–ç±»åž‹çš„å…¨å±€å˜é‡å£°æ˜Ž,å¦‚éœ€ä½¿ç”¨å­—ç¬¦ä¸²ç±»åž‹å¯ä»¥åœ¨é¡µé¢ä¸­ä½¿ç”¨å˜é‡æŽ§ä»¶æ¥å®žçŽ°
+    //å…¨å±€å˜é‡å®šä¹‰
+    int sys0=0,sys1=0,sys2=0
+    int restFlag=0
+    int restFlag1=0
+    int restFlag2=0
+    int enable_filment_check=0
+    int status_led1=0
+    int status_led2=0
+    int langue
+    int losspage=0
+    int en_beep=0
+    int en_dim=1
+    int rest_count=0
+    int default_dim=5
+    int default_re_time=180
+    int factory_dim=100
+    sets "eepstate",1
+    repo restFlag,1020
+    if(restFlag!=0x12345678)
+    {
+      //åˆå§‹åŒ–eeprom
+      for(sys0=0;sys0<1020;sys0+=4)
+      {
+        wepo 0,sys0
+      }
+      //è®¾ç½®é»˜è®¤å€¼
+      langue=1     //é»˜è®¤è¯­è¨€
+      losspage=1  //é»˜è®¤æ¢å¤ä¸»é¡µ
+      en_beep=1   //é»˜è®¤æœ‰æŒ‰é”®å£°éŸ³
+      printpause.t0.txt="" //é»˜è®¤æ‰“å°æ–‡ä»¶å
+      restFlag2=0
+      restFlag1=0
+      printpause.printprocess.val=0
+      printpause.printvalue.txt=""
+      leveling.va1.val=0
+      main.va0.val=0
+      //å†™é»˜è®¤å€¼
+      wepo langue,0
+      wepo losspage,5
+      wepo printpause.t0.txt,10
+      wepo en_beep,50
+      wepo restFlag2,100
+      wepo restFlag1,105
+      //wepo printpause.printprocess.val,110
+      //wepo printpause.printvalue.txt,115
+      wepo leveling.va1.val,120
+      wepo en_dim,130
+      //å†™æ ‡å¿—å€¼
+      wepo 0x12345678,1020
+    }else
+    {
+      //èŽ·å–ä¿å­˜å€¼
+      repo langue,0
+      repo losspage,5
+      repo printpause.t0.txt,10
+      repo en_beep,50
+      repo restFlag2,100
+      repo restFlag1,105
+      //repo printpause.printprocess.val,110
+      //repo printpause.printvalue.txt,115
+      repo leveling.va1.val,120
+      repo main.va0.val,125
+      repo en_dim,130
+      //èŽ·å–æœºåž‹ä¿¡æ¯
+      printh 5A A5
+      printh 06
+      printh 83
+      printh 10 44
+      printh 01
+      printh 00 16
+    }
+    baud=115200
+    multiset.h0.val=50
+    dim=multiset.h0.val
+    printh 00 00 00 ff ff ff 88 ff ff ff//è¾“å‡ºä¸Šç”µä¿¡æ¯åˆ°ä¸²å£
+    com_star
+    page 0                       //ä¸Šç”µåˆ·æ–°ç¬¬0é¡µ

@@ -1,0 +1,142 @@
+Page err_heatfail
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            com_stop
+            dim=100
+            t0.font=0
+            t1.font=0
+            if(langue==0)
+            {
+                t0.font=1
+                t1.font=1
+                t0.txt="çƒ­å¤±æŽ§"
+                t1.txt="å½“å‡æ¸©åˆ°ç›®æ ‡æ¸©åº¦åŽ , å½“å‰æ¸©åº¦åœ¨è®¾å®šæ—¶é—´å†…ä½ŽäºŽç›®æ ‡æ¸©åº¦å€¼æˆ–è€…è¶…è¿‡ç›®æ ‡æ¸©åº¦,åˆ™æŠ¥é”™;è¯·æ£€æŸ¥çƒ­æ•ç”µé˜»æ˜¯å¦æ­£å¸¸æˆ–æ£€æµ‹PIDå€¼æ˜¯å¦åˆé€‚."
+            }else if(langue==1)
+            {
+                t0.txt="Thermal runaway"
+                t1.txt="when reaching the target temperature, if the current temperature is lower than or exceeds the target temperature within the set time, an error will be reported; please check whether the thermistor is normal or the PID value is appropriate."
+            }else if(langue==2)
+            {
+                t0.txt="Desenfreno tÃ©rmico"
+                t1.txt="Cuando se calienta a la temperatura deseada, Se informa de un error si la temperatura actual cae por debajo del valor de la temperatura objetivo o supera la temperatura objetivo dentro del tiempo establecido; Por favor, compruebe si el termistor estÃ¡ bien o compruebe si el valor del PID es apropiado."
+            }else if(langue==3)
+            {
+                t0.txt="Emballement thermique"
+                t1.txt="Lorsque la tempÃ©rature atteint la tempÃ©rature cible, si la tempÃ©rature actuelle dÃ©passe ou est infÃ©rieure Ã  la tempÃ©rature cible dans le temps dÃ©fini, une erreur sera signalÃ©eÂ ; veuillez vÃ©rifier si la thermistance est normale ou si la valeur PID est appropriÃ©e."
+            }else if(langue==4)
+            {
+                t0.txt="Fuga termica"
+                t1.txt="al raggiungimento della temperatura target, se la temperatura attuale Ã¨ inferiore o superiore alla temperatura target entro il tempo impostato, verrÃ  segnalato un errore; verificare se il termistore Ã¨ normale o se il valore PID Ã¨ appropriato."
+            }else if(langue==5)
+            {
+                t0.txt="Ð¢ÐµÐ¿Ð»Ð¾Ð²Ð¾Ð¹ Ñ€Ð°Ð·Ð³Ð¾Ð½"
+                t1.txt="Ð¿Ñ€Ð¸ Ð´Ð¾ÑÑ‚Ð¸Ð¶ÐµÐ½Ð¸Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¹ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ñ‹, ÐµÑÐ»Ð¸ Ñ‚ÐµÐºÑƒÑ‰Ð°Ñ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ð° Ð½Ð¸Ð¶Ðµ Ð¸Ð»Ð¸ Ð¿Ñ€ÐµÐ²Ñ‹ÑˆÐ°ÐµÑ‚ Ð·Ð°Ð´Ð°Ð½Ð½ÑƒÑŽ Ñ‚ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ñƒ Ð² Ñ‚ÐµÑ‡ÐµÐ½Ð¸Ðµ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸, Ð±ÑƒÐ´ÐµÑ‚ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¾ Ð¾Ð± Ð¾ÑˆÐ¸Ð±ÐºÐµ; Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑŒÑ‚Ðµ, Ð¸ÑÐ¿Ñ€Ð°Ð²ÐµÐ½ Ð»Ð¸ Ñ‚ÐµÑ€Ð¼Ð¸ÑÑ‚Ð¾Ñ€ Ð¸Ð»Ð¸ ÑÐ¾Ð¾Ñ‚Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÐµÑ‚ Ð»Ð¸ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ PID Ð¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¼."
+            }else if(langue==6)
+            {
+                t0.txt="Thermisches Durchgehen"
+                t1.txt="bei Erreichen der Zieltemperatur, wenn die aktuelle Temperatur innerhalb der eingestellten Zeit unter oder Ã¼ber der Zieltemperatur liegt, wird ein Fehler gemeldet. Bitte Ã¼berprÃ¼fen Sie, ob der Thermistor normal ist oder der PID-Wert angemessen ist."
+            }else if(langue==7)
+            {
+                t0.font=1
+                t1.font=1
+                t0.txt="ç†±æš´èµ°"
+                t1.txt="ç›®æ¨™æ¸©åº¦ã«é”ã—ãŸã¨ãã€è¨­å®šæ™‚é–“å†…ã«ç¾åœ¨ã®æ¸©åº¦ãŒç›®æ¨™æ¸©åº¦ã‚ˆã‚Šä½Žããªã£ãŸã‚Šã€ç›®æ¨™æ¸©åº¦ã‚’è¶…ãˆãŸã‚Šã™ã‚‹ã¨ã€ã‚¨ãƒ©ãƒ¼ãŒå ±å‘Šã•ã‚Œã¾ã™ã€‚ã‚µãƒ¼ãƒŸã‚¹ã‚¿ãŒæ­£å¸¸ã§ã‚ã‚‹ã‹ã€PIDå€¤ãŒé©åˆ‡ã§ã‚ã‚‹ã‹ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚"
+            }
+            losspage=1
+            wepo losspage,5
+        
+Text t0
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 11
+        y coordinate            : 156
+        Width                   : 250
+        Height                  : 37
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : bottom
+        Input Type              : character
+        Text                    : çƒ­å¤±æŽ§
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text t1
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 191
+        Width                   : 247
+        Height                  : 183
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å½“å‡æ¸©åˆ°ç›®æ ‡æ¸©åº¦åŽ , å½“å‰æ¸©åº¦åœ¨è®¾å®šæ—¶é—´å†…ä½ŽäºŽç›®æ ‡æ¸©åº¦å€¼æˆ–è€…è¶…è¿‡ç›®æ ‡æ¸©åº¦,åˆ™æŠ¥é”™;è¯·æ£€æŸ¥çƒ­æ•ç”µé˜»æ˜¯å¦æ­£å¸¸æˆ–æ£€æµ‹PIDå€¼æ˜¯å¦åˆé€‚
+        Max. Text Size          : 512
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 10
+        y coordinate     : 62
+        Width            : 252
+        Height           : 312
+        Effect           : load
+        Picture ID       : 87
+    
+Timer tm0
+    Attributes
+        ID         : 2
+        Scope      : local
+        Period (ms): 500
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            beep 500
+        

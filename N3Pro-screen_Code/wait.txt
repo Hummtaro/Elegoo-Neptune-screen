@@ -1,0 +1,114 @@
+Page wait
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 50
+    
+    Events
+        Preinitialize Event
+            t1.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t1.txt="å¤„ç†ä¸­è¯·ç¨åŽ"
+            }else if(langue==1)
+            {
+                t1.txt="Processing please wait"
+            }else if(langue==2)
+            {
+                t1.txt="Procesando .. por favor espere"
+            }else if(langue==3)
+            {
+                t1.txt="Traitement veuillez patienter"
+            }else if(langue==4)
+            {
+                t1.txt="In elaborazione attendere"
+            }else if(langue==5)
+            {
+                t1.txt="ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ° Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð° Ð¿Ð¾Ð´Ð¾Ð¶Ð´Ð¸Ñ‚Ðµ"
+            }else if(langue==6)
+            {
+                t1.txt="Verarbeite .. Bitte warten"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t1.txt="å‡¦ç†ä¸­ã§ã™ ãŠå¾…ã¡ãã ã•ã„"
+            }
+            losspage=27
+            wepo losspage,5
+        
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+Text t1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 18
+        y coordinate            : 183
+        Width                   : 237
+        Height                  : 75
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å¤„ç†ä¸­è¯·ç¨åŽ
+        Max. Text Size          : 128
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Timer tm0
+    Attributes
+        ID         : 1
+        Scope      : global
+        Period (ms): 2000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            page main
+        
+Timer tm_rest
+    Attributes
+        ID         : 3
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            dim=multiset.h0.val
+            rest_count++
+            if(rest_count>=default_re_time)
+            {
+                dim=default_dim
+                rest_count=0
+                tm_rest.en=0
+            }
+        

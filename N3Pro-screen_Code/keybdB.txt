@@ -1,0 +1,1177 @@
+Page keybdB
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : no background (transparent)
+    
+    Events
+        Preinitialize Event
+            //ï¿½ï¿½ï¿½Ã´ï¿½Ò³Ö®Ç°ï¿½ï¿½ï¿½È¶Ô´ï¿½Ò³ï¿½ï¿½loadpageid.valï¿½ï¿½loadcmpid.valï¿½ï¿½Öµï¿½Í¿ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ô¶ï¿½Êµï¿½ï¿½
+            //loadpageid.valï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ò³ï¿½ï¿½ID,loadcmpid.valï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ò³ï¿½Ä¿Ø¼ï¿½ID
+            if(p[loadpageid.val].b[loadcmpid.val].type==54)
+            {
+                covx p[loadpageid.val].b[loadcmpid.val].val,input.txt,0,0
+                inputlenth.val=input.txt_maxl
+            }else if(p[loadpageid.val].b[loadcmpid.val].type==59)
+            {
+                inputlenth.val=p[loadpageid.val].b[loadcmpid.val].val
+                if(inputlenth.val<0)
+                {
+                    inputlenth.val*=-1
+                    input.txt="-"
+                }else
+                {
+                    input.txt=""
+                }
+                temp.val=1
+                for(temp2.val=0;temp2.val<p[loadpageid.val].b[loadcmpid.val].vvs1;temp2.val++)
+                {
+                    temp.val*=10
+                }
+                temp2.val=inputlenth.val/temp.val//ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Î»
+                cov temp2.val,tempstr.txt,0
+                input.txt+=tempstr.txt+"."
+                temp2.val=temp2.val*temp.val-inputlenth.val//ï¿½Ãµï¿½Ð¡ï¿½ï¿½Î»
+                if(temp2.val<0)
+                {
+                    temp2.val*=-1
+                }
+                covx temp2.val,tempstr.txt,p[loadpageid.val].b[loadcmpid.val].vvs1,0
+                input.txt+=tempstr.txt
+                inputlenth.val=24
+            }else
+            {
+                input.txt=p[loadpageid.val].b[loadcmpid.val].txt
+                inputlenth.val=p[loadpageid.val].b[loadcmpid.val].txt_maxl
+                if(p[loadpageid.val].b[loadcmpid.val].type==116)
+                {
+                    show.pw=p[loadpageid.val].b[loadcmpid.val].pw
+                }
+            }
+            show.txt=input.txt
+        
+        Page Exit Event
+            if(loadpageid.val==7)
+            {
+                if(p[loadpageid.val].b[loadcmpid.val].id==22)
+                {
+                    covx pretemp.nozzle.txt,pretemp.va0.val,0,0
+                    if(pretemp.va0.val>=260)
+                    {
+                        pretemp.va0.val=260
+                        pretemp.nozzle.txt="260"
+                    }else if(pretemp.va0.val<=25)
+                    {
+                        pretemp.va0.val=pretemp.va2.val
+                        covx pretemp.va0.val,pretemp.nozzle.txt,0,0
+                    }
+                    printh 5A A5
+                    printh 06
+                    printh 83
+                    printh 10 34
+                    printh 01
+                    prints pretemp.va0.val,0
+                }else if(p[loadpageid.val].b[loadcmpid.val].id==23)
+                {
+                    covx pretemp.bed.txt,pretemp.va1.val,0,0
+                    if(pretemp.va1.val>=110)
+                    {
+                        pretemp.va1.val=110
+                        pretemp.bed.txt="110"
+                    }else if(pretemp.va1.val<=25)
+                    {
+                        pretemp.va1.val=pretemp.va2.val
+                        covx pretemp.va1.val,pretemp.bed.txt,0,0
+                    }
+                    printh 5A A5
+                    printh 06
+                    printh 83
+                    printh 10 3A
+                    printh 01
+                    prints pretemp.va1.val,0
+                }
+            }else if(loadpageid.val==9)
+            {
+                if(p[loadpageid.val].b[loadcmpid.val].id==9)
+                {
+                    covx prefilament.filamentlength.txt,prefilament.va0.val,0,0
+                    if(prefilament.va0.val>=300)
+                    {
+                        prefilament.va0.val=300
+                        prefilament.filamentlength.txt="300"
+                    }else if(prefilament.va0.val<10)
+                    {
+                        prefilament.va0.val=prefilament.va2.val
+                        covx prefilament.va0.val,prefilament.filamentlength.txt,0,0
+                    }
+                    printh 5A A5
+                    printh 06
+                    printh 83
+                    printh 10 54
+                    printh 01
+                    prints prefilament.va0.val,0
+                }else if(p[loadpageid.val].b[loadcmpid.val].id==10)
+                {
+                    covx prefilament.filamentspeed.txt,prefilament.va1.val,0,0
+                    if(prefilament.va1.val>=360)
+                    {
+                        prefilament.va1.val=360
+                        prefilament.filamentlength.txt="360"
+                    }else if(prefilament.va1.val<10)
+                    {
+                        prefilament.va1.val=prefilament.va2.val
+                        covx prefilament.va1.val,prefilament.filamentspeed.txt,0,0
+                    }
+                    printh 5A A5
+                    printh 06
+                    printh 83
+                    printh 10 58
+                    printh 01
+                    prints prefilament.va1.val,0
+                }
+            }
+        
+Variable (int32) loadpageid
+    Attributes
+        ID   : 27
+        Scope: global
+        Value: 0
+    
+Variable (int32) loadcmpid
+    Attributes
+        ID   : 29
+        Scope: global
+        Value: 0
+    
+Variable (string) input
+    Attributes
+        ID            : 30
+        Scope         : local
+        Text          : 
+        Max. Text Size: 14
+    
+Variable (int32) temp
+    Attributes
+        ID   : 31
+        Scope: local
+        Value: 0
+    
+Variable (int32) inputlenth
+    Attributes
+        ID   : 32
+        Scope: local
+        Value: 0
+    
+Variable (string) tempstr
+    Attributes
+        ID            : 34
+        Scope         : local
+        Text          : 
+        Max. Text Size: 20
+    
+Variable (int32) temp2
+    Attributes
+        ID   : 35
+        Scope: local
+        Value: 0
+    
+Text t0
+    Attributes
+        ID                      : 15
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 1
+        y coordinate            : 253
+        Width                   : 270
+        Height                  : 226
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Border Color            : 7583
+        Border Width            : 2
+        Font ID                 : 0
+        Back. Color             : 14823
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 0
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 0
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Text show
+    Attributes
+        ID                      : 16
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 13
+        y coordinate            : 262
+        Width                   : 250
+        Height                  : 32
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : right
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 24
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 0
+        y coordinate     : 223
+        Width            : 272
+        Height           : 259
+        Effect           : load
+        Picture ID       : 85
+    
+Crop Picture q1
+    Attributes
+        ID                      : 2
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 7
+        y coordinate            : 390
+        Width                   : 62
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q0
+    Attributes
+        ID                      : 3
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 4
+        y coordinate            : 433
+        Width                   : 133
+        Height                  : 45
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q13
+    Attributes
+        ID                      : 4
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 205
+        y coordinate            : 345
+        Width                   : 65
+        Height                  : 42
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q2
+    Attributes
+        ID                      : 5
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 76
+        y coordinate            : 389
+        Width                   : 61
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q4
+    Attributes
+        ID                      : 6
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 7
+        y coordinate            : 346
+        Width                   : 60
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q5
+    Attributes
+        ID                      : 7
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 75
+        y coordinate            : 346
+        Width                   : 60
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q6
+    Attributes
+        ID                      : 8
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 141
+        y coordinate            : 345
+        Width                   : 60
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q7
+    Attributes
+        ID                      : 9
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 7
+        y coordinate            : 301
+        Width                   : 60
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q8
+    Attributes
+        ID                      : 10
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 73
+        y coordinate            : 301
+        Width                   : 60
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q9
+    Attributes
+        ID                      : 11
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 141
+        y coordinate            : 300
+        Width                   : 60
+        Height                  : 40
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q10
+    Attributes
+        ID                      : 12
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 205
+        y coordinate            : 390
+        Width                   : 65
+        Height                  : 85
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q11
+    Attributes
+        ID                      : 13
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 205
+        y coordinate            : 345
+        Width                   : 65
+        Height                  : 42
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q12
+    Attributes
+        ID                      : 14
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 205
+        y coordinate            : 302
+        Width                   : 65
+        Height                  : 41
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Crop Picture q3
+    Attributes
+        ID                      : 38
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 135
+        y coordinate            : 390
+        Width                   : 63
+        Height                  : 41
+        Effect                  : load
+        Cropped Back. Picture ID: 137
+    
+Button b210
+    Attributes
+        ID                                  : 17
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 210
+        y coordinate                        : 394
+        Width                               : 53
+        Height                              : 80
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 
+        Max. Text Size                      : 6
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q10.picc=136
+        
+        Touch Release Event
+            //ï¿½ï¿½ï¿½Ã´ï¿½Ò³Ö®Ç°ï¿½ï¿½ï¿½È¶Ô´ï¿½Ò³ï¿½ï¿½loadpageid.valï¿½ï¿½loadcmpid.valï¿½ï¿½Öµï¿½Í¿ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ô¶ï¿½Êµï¿½ï¿½
+            //loadpageid.valï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ò³ï¿½ï¿½ID,loadcmpid.valï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ò³ï¿½Ä¿Ø¼ï¿½ID
+            if(p[loadpageid.val].b[loadcmpid.val].type==54)
+            {
+                covx input.txt,p[loadpageid.val].b[loadcmpid.val].val,0,0
+            }else if(p[loadpageid.val].b[loadcmpid.val].type==59)
+            {
+                covx input.txt,temp.val,0,0
+                if(temp.val<0)
+                {
+                    temp.val*=-1
+                }
+                for(temp2.val=0;temp2.val<p[loadpageid.val].b[loadcmpid.val].vvs1;temp2.val++)
+                {
+                    temp.val*=10
+                }
+                p[loadpageid.val].b[loadcmpid.val].val=temp.val
+                strlen input.txt,temp.val
+                temp.val--
+                while(temp.val>=0)
+                {
+                    substr input.txt,tempstr.txt,temp.val,1
+                    if(tempstr.txt==".")
+                    {
+                        substr input.txt,tempstr.txt,temp.val+1,p[loadpageid.val].b[loadcmpid.val].vvs1
+                        covx tempstr.txt,temp2.val,0,0
+                        strlen tempstr.txt,temp.val
+                        while(temp.val<p[loadpageid.val].b[loadcmpid.val].vvs1)
+                        {
+                            temp2.val*=10
+                            temp.val++
+                        }
+                        p[loadpageid.val].b[loadcmpid.val].val+=temp2.val
+                        temp.val=-1
+                    }
+                    temp.val--
+                }
+                substr input.txt,tempstr.txt,0,1
+                if(tempstr.txt=="-")
+                {
+                    p[loadpageid.val].b[loadcmpid.val].val*=-1
+                }
+            }else
+            {
+                p[loadpageid.val].b[loadcmpid.val].txt=input.txt
+            }
+            q10.picc=137
+            page loadpageid.val
+        
+Button b1
+    Attributes
+        ID                                  : 18
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 7
+        y coordinate                        : 391
+        Width                               : 60
+        Height                              : 40
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 4968
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 1
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q1.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b1.txt
+                show.txt=input.txt
+            }
+            q1.picc=137
+        
+Button b2
+    Attributes
+        ID                                  : 19
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 77
+        y coordinate                        : 391
+        Width                               : 61
+        Height                              : 40
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 4968
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 2
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q2.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b2.txt
+                show.txt=input.txt
+            }
+            q2.picc=137
+        
+Button b4
+    Attributes
+        ID                                  : 20
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 8
+        y coordinate                        : 347
+        Width                               : 62
+        Height                              : 41
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 4
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q4.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b4.txt
+                show.txt=input.txt
+            }
+            q4.picc=137
+        
+Button b5
+    Attributes
+        ID                                  : 21
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 76
+        y coordinate                        : 350
+        Width                               : 60
+        Height                              : 35
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 5
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q5.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b5.txt
+                show.txt=input.txt
+            }
+            q5.picc=137
+        
+Button b6
+    Attributes
+        ID                                  : 22
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 140
+        y coordinate                        : 345
+        Width                               : 63
+        Height                              : 43
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 6
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q6.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b6.txt
+                show.txt=input.txt
+            }
+            q6.picc=137
+        
+Button b7
+    Attributes
+        ID                                  : 23
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 7
+        y coordinate                        : 302
+        Width                               : 63
+        Height                              : 40
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 7
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q7.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b7.txt
+                show.txt=input.txt
+            }
+            q7.picc=137
+        
+Button b8
+    Attributes
+        ID                                  : 24
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 76
+        y coordinate                        : 302
+        Width                               : 60
+        Height                              : 42
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 8
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q8.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b8.txt
+                show.txt=input.txt
+            }
+            q8.picc=137
+        
+Button b200
+    Attributes
+        ID                                  : 25
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 203
+        y coordinate                        : 304
+        Width                               : 60
+        Height                              : 36
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 
+        Max. Text Size                      : 6
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q12.picc=136
+        
+        Touch Release Event
+            q12.picc=137
+            input.txt-=1
+            show.txt=input.txt
+        
+Button b9
+    Attributes
+        ID                                  : 26
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 142
+        y coordinate                        : 302
+        Width                               : 61
+        Height                              : 42
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 9
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q9.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b9.txt
+                show.txt=input.txt
+            }
+            q9.picc=137
+        
+Button b251
+    Attributes
+        ID                                  : 33
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 208
+        y coordinate                        : 347
+        Width                               : 59
+        Height                              : 38
+        Effect                              : load
+        Fill                                : transparent
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 63488
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 
+        Max. Text Size                      : 10
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q10.picc=136
+        
+        Touch Release Event
+            q11.picc=137
+            page loadpageid.val
+        
+Button b10
+    Attributes
+        ID                                  : 36
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 221
+        y coordinate                        : 222
+        Width                               : 50
+        Height                              : 32
+        Effect                              : load
+        Fill                                : transparent
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 63488
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 
+        Max. Text Size                      : 10
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            beep 50
+        
+        Touch Release Event
+            page loadpageid.val
+        
+Button b0
+    Attributes
+        ID                                  : 37
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 5
+        y coordinate                        : 435
+        Width                               : 127
+        Height                              : 40
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 0
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q0.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b0.txt
+                show.txt=input.txt
+            }
+            q0.picc=137
+        
+Button b3
+    Attributes
+        ID                                  : 39
+        Scope                               : local
+        Dragging                            : 0
+        Send Component ID                   : disabled
+        Opacity                             : 127
+        x coordinate                        : 140
+        y coordinate                        : 393
+        Width                               : 56
+        Height                              : 36
+        Effect                              : load
+        Fill                                : transparent
+        Border Color                        : 7583
+        Border Width                        : 1
+        Font ID                             : 0
+        Background Picture ID (Unpressed)   : 65535
+        Cropped Back. Picture ID (Unpressed): 65535
+        Back. Color                         : 14823
+        Back. Picture ID (Pressed)          : 65535
+        Cropped Back. Picture ID (Pressed)  : 65535
+        Back. Color (Pressed)               : 32799
+        Font Color (Unpressed)              : 65535
+        Horizontal Alignment                : center
+        Vertical Alignment                  : center
+        State                               : unpressed
+        Text                                : 3
+        Max. Text Size                      : 1
+        Word wrap                           : disabled
+        Horizontal Spacing                  : 0
+        Vertical Spacing                    : 0
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q3.picc=136
+        
+        Touch Release Event
+            btlen input.txt,temp.val
+            if(temp.val<inputlenth.val)
+            {
+                input.txt+=b3.txt
+                show.txt=input.txt
+            }
+            q3.picc=137
+        
+Timer tm0
+    Attributes
+        ID         : 28
+        Scope      : local
+        Period (ms): 500
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            if(tm0.tim==500)
+            {
+                tm0.tim=450
+                show.txt=input.txt+"|"
+            }else
+            {
+                tm0.tim=500
+                show.txt=input.txt
+            }
+        

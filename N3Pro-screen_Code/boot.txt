@@ -1,0 +1,187 @@
+Page boot
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 2
+    
+    Events
+        Preinitialize Event
+            tm0.en=1
+            tm2.en=1
+            va1.val=89
+            com_star
+        
+Variable (int32) va0
+    Attributes
+        ID   : 3
+        Scope: local
+        Value: 0
+    
+Variable (int32) va1
+    Attributes
+        ID   : 7
+        Scope: local
+        Value: 0
+    
+Text t0
+    Attributes
+        ID                      : 8
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 7
+        y coordinate            : 365
+        Width                   : 258
+        Height                  : 30
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 64
+        Word wrap               : disabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture logo
+    Attributes
+        ID               : 5
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 0
+        y coordinate     : 166
+        Width            : 272
+        Height           : 60
+        Effect           : load
+        Picture ID       : 89
+    
+Progress Bar j0
+    Attributes
+        ID                   : 1
+        Scope                : global
+        Dragging             : 0
+        Send Component ID    : disabled
+        Opacity              : 127
+        x coordinate         : 8
+        y coordinate         : 405
+        Width                : 255
+        Height               : 12
+        Effect               : load
+        Fill                 : crop image
+        Direction            : horizontal
+        Value                : 0
+        Corner Radius (Perc.): 25
+        Background Picture ID: 65535
+        Foreground Picture ID: 65535
+    
+Hotspot m0
+    Attributes
+        ID               : 9
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 210
+        y coordinate     : 1
+        Width            : 60
+        Height           : 60
+        Effect           : load
+    
+    Events
+        Touch Release Event
+            page main
+        
+Timer tm0
+    Attributes
+        ID         : 2
+        Scope      : local
+        Period (ms): 1000
+        Enabled    : no
+    
+    Events
+        Timer Event
+            if(j0.val==0)
+            {
+                va0.val++
+                t0.txt="booting..."
+            }else if(j0.val>0)
+            {
+                t0.txt="starting..."
+                tm0.en=0
+                restFlag2=0
+                restFlag1=0
+            }
+            if(va0.val>=20)
+            {
+                if(va0.val==20)
+                {
+                    //å¿ƒè·³
+                    printh 5A A5
+                    printh 06
+                    printh 83
+                    printh 10 44
+                    printh 01
+                    printh 00 0C
+                }
+                if(va0.val==22)
+                {
+                    t0.txt="update firmware..."
+                    tm0.en=0
+                    va0.val=0
+                }
+                va0.val++
+            }
+        
+Timer tm1
+    Attributes
+        ID         : 4
+        Scope      : local
+        Period (ms): 50
+        Enabled    : no
+    
+    Events
+        Timer Event
+            t0.txt="Lcd Recovery..."
+            va0.val++
+            boot.j0.val=va0.val
+            if(va0.val==100)
+            {
+                page losspage
+            }
+        
+Timer tm2
+    Attributes
+        ID         : 6
+        Scope      : local
+        Period (ms): 80
+        Enabled    : no
+    
+    Events
+        Timer Event
+            va1.val=va1.val+1
+            logo.pic=va1.val
+            if(va1.val==127)
+            {
+                va1.val=89
+            }
+        
