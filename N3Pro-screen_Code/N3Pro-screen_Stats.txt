@@ -14,10 +14,6 @@ leveldata_49
 	67   Component(s)
 	185  Line(s) of event code
 	63   Unique line(s) of event code
-keybdB
-	40   Component(s)
-	317  Line(s) of event code
-	152  Unique line(s) of event code
 aux49_data
 	71   Component(s)
 	223  Line(s) of event code
@@ -310,6 +306,10 @@ main
 	30   Component(s)
 	277  Line(s) of event code
 	160  Unique line(s) of event code
+keybdB
+	40   Component(s)
+	317  Line(s) of event code
+	152  Unique line(s) of event code
 adjustspeed
 	26   Component(s)
 	347  Line(s) of event code

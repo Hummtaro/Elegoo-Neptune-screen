@@ -65,10 +65,10 @@ Page keybdB
                 if(p[loadpageid.val].b[loadcmpid.val].id==22)
                 {
                     covx pretemp.nozzle.txt,pretemp.va0.val,0,0
-                    if(pretemp.va0.val>=260)
+                    if(pretemp.va0.val>=350)
                     {
-                        pretemp.va0.val=260
-                        pretemp.nozzle.txt="260"
+                        pretemp.va0.val=350
+                        pretemp.nozzle.txt="350"
                     }else if(pretemp.va0.val<=25)
                     {
                         pretemp.va0.val=pretemp.va2.val
@@ -83,10 +83,10 @@ Page keybdB
                 }else if(p[loadpageid.val].b[loadcmpid.val].id==23)
                 {
                     covx pretemp.bed.txt,pretemp.va1.val,0,0
-                    if(pretemp.va1.val>=110)
+                    if(pretemp.va1.val>=150)
                     {
-                        pretemp.va1.val=110
-                        pretemp.bed.txt="110"
+                        pretemp.va1.val=150
+                        pretemp.bed.txt="150"
                     }else if(pretemp.va1.val<=25)
                     {
                         pretemp.va1.val=pretemp.va2.val
