@@ -75,6 +75,14 @@ Page printfinish
             losspage=24
             wepo losspage,5
         
+        Postinitialize Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 40
+            printh 01
+            printh 00 05
+        
         Touch Press Event
             if(en_dim==1)
             {

@@ -166,6 +166,13 @@ Timer tm1
             boot.j0.val=va0.val
             if(va0.val==100)
             {
+                //èŽ·å–ä¸€æ¬¡å¼€æœºä¿¡æ¯
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 10 44
+                printh 01
+                printh 00 16
                 page losspage
             }
         

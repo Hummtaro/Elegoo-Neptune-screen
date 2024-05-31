@@ -720,12 +720,12 @@ Hotspot m0
     
     Events
         Touch Press Event
-            printh 5A A5
-            printh 06
-            printh 83
-            printh 10 3E
-            printh 01
-            printh 00 08
+            //printh 5A A5
+            //printh 06
+            //printh 83
+            //printh 10 3E
+            //printh 01
+            //printh 00 08
             if(en_beep==1)
             {
                 beep 50

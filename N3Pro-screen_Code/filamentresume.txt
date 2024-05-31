@@ -407,12 +407,13 @@ Hotspot m1
             }
         
         Touch Release Event
-            printh 5A A5
-            printh 06
-            printh 83
-            printh 10 08
-            printh 01
-            printh 00 01
+            page resumeconfirm
+            //printh 5A A5
+            //printh 06
+            //printh 83
+            //printh 10 08
+            //printh 01
+            //printh 00 01
         
 Hotspot m5
     Attributes

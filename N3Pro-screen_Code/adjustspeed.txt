@@ -114,6 +114,7 @@ Page adjustspeed
                 t7.txt="èª¿æ•´"
                 t8.txt="ã‚¹ãƒ”ãƒ¼ãƒ‰"
             }
+            vis p2,0
             adjustspeed.p0.pic=59
             adjustspeed.p1.pic=64
             losspage=29
@@ -134,10 +135,10 @@ Number targetspeed
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 79
-        y coordinate            : 220
-        Width                   : 62
-        Height                  : 30
+        x coordinate            : 87
+        y coordinate            : 227
+        Width                   : 48
+        Height                  : 20
         Effect                  : load
         Fill                    : transparent
         Associated Keyboard     : none
@@ -148,7 +149,7 @@ Number targetspeed
         Font Color              : 65535
         Horizontal Alignment    : center
         Vertical Alignment      : center
-        Value                   : 0
+        Value                   : 100
         Significant digits shown: all
         Format                  : decimal
         Word wrap               : enabled
@@ -378,6 +379,20 @@ Picture p1
         Height           : 50
         Effect           : load
         Picture ID       : 64
+    
+Picture p2
+    Attributes
+        ID               : 25
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 136
+        y coordinate     : 225
+        Width            : 23
+        Height           : 23
+        Effect           : load
+        Picture ID       : 197
     
 Hotspot m0
     Attributes
@@ -688,6 +703,7 @@ Hotspot m7
             printh 01
             printh 00 0A
             adjustspeed.p0.pic=59
+            vis p2,0
         
 Hotspot m8
     Attributes
@@ -723,6 +739,7 @@ Hotspot m8
             printh 01
             printh 00 0B
             adjustspeed.p0.pic=60
+            vis p2,0
         
 Hotspot m9
     Attributes
@@ -758,6 +775,14 @@ Hotspot m9
             printh 01
             printh 00 0C
             adjustspeed.p0.pic=61
+            if(main.version.val>=142)
+            {
+                vis p2,1
+                adjustspeed.p2.pic=197
+            }else
+            {
+                vis p2,0
+            }
         
 Hotspot m3
     Attributes

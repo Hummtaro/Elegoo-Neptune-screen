@@ -134,6 +134,15 @@ Page information
             losspage=35
             wepo losspage,5
         
+        Postinitialize Event
+            if(main.version.val==142)
+            {
+                information.lversion.txt="V1.4.2"
+            }else
+            {
+                information.lversion.txt="V1.4.1"
+            }
+        
         Touch Press Event
             if(en_dim==1)
             {
@@ -416,7 +425,7 @@ Text lversion
         Horizontal Alignment    : right
         Vertical Alignment      : center
         Input Type              : character
-        Text                    : 1.4
+        Text                    : V1.4.2
         Max. Text Size          : 32
         Word wrap               : disabled
         Horizontal Spacing      : 0

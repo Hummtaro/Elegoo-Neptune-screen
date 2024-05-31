@@ -34,7 +34,7 @@ Page warn_aux
             {
                 t3.txt="Adjust the distance between the nozzle and the bed by turning the nut (about A4 paper thickness)"
                 t4.txt="Confirm"
-                t5.txt="Cancle"
+                t5.txt="Cancel"
             }else if(langue==2)
             {
                 t3.txt="Ajuste la distancia entre la boquilla y la cama girando la tuerca (sobre un grosor de papel A4)"

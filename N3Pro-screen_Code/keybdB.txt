@@ -125,7 +125,7 @@ Page keybdB
                     if(prefilament.va1.val>=360)
                     {
                         prefilament.va1.val=360
-                        prefilament.filamentlength.txt="360"
+                        prefilament.filamentspeed.txt="360"
                     }else if(prefilament.va1.val<10)
                     {
                         prefilament.va1.val=prefilament.va2.val

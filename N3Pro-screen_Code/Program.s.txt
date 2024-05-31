@@ -12,9 +12,10 @@ Program.s
     int langue
     int losspage=0
     int en_beep=0
+    int en_files=0
     int en_dim=1
     int rest_count=0
-    int default_dim=5
+    int default_dim=10
     int default_re_time=180
     int factory_dim=100
     sets "eepstate",1
@@ -37,6 +38,7 @@ Program.s
       printpause.printvalue.txt=""
       leveling.va1.val=0
       main.va0.val=0
+      en_files=0
       //å†™é»˜è®¤å€¼
       wepo langue,0
       wepo losspage,5
@@ -48,6 +50,7 @@ Program.s
       //wepo printpause.printvalue.txt,115
       wepo leveling.va1.val,120
       wepo en_dim,130
+      wepo en_files,135
       //å†™æ ‡å¿—å€¼
       wepo 0x12345678,1020
     }else
@@ -64,6 +67,7 @@ Program.s
       repo leveling.va1.val,120
       repo main.va0.val,125
       repo en_dim,130
+      repo en_files,135
       //èŽ·å–æœºåž‹ä¿¡æ¯
       printh 5A A5
       printh 06

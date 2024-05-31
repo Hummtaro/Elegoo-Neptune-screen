@@ -31,6 +31,7 @@ Page multiset
             t5.font=0
             t6.font=0
             t7.font=0
+            t8.font=0
             if(langue==0)
             {
                 t0.font=1
@@ -39,12 +40,14 @@ Page multiset
                 t5.font=1
                 t6.font=1
                 t7.font=1
+                t8.font=1
                 t0.txt="é«˜çº§è®¾ç½®"
                 t1.txt="æŒ‰é”®å£°éŸ³"
                 t2.txt="èƒŒå…‰"
                 t5.txt="ç”µæœºè®¾ç½®"
                 t6.txt="é€Ÿåº¦è®¾ç½®"
                 t7.txt="æ–­ç”µç»­æ‰“"
+                t8.txt="å¤šæ–‡ä»¶æ˜¾ç¤º"
             }else if(langue==1)
             {
                 t0.txt="Advanced Settings"
@@ -53,6 +56,7 @@ Page multiset
                 t5.txt="Motor Settings"
                 t6.txt="Speed Settings"
                 t7.txt="Resume Printing"
+                t8.txt="Multiple File Display"
             }else if(langue==2)
             {
                 t0.txt="Ajustes avanzados"
@@ -61,6 +65,7 @@ Page multiset
                 t5.txt="Ajustes del motor"
                 t6.txt="ConfiguraciÃ³n de velocidad"
                 t7.txt="RecuperaciÃ³n de pÃ©rdida de energÃ­a"
+                t8.txt="VisualizaciÃ³n de varios archivos"
             }else if(langue==3)
             {
                 t0.txt="RÃ©glages avancÃ©s"
@@ -69,6 +74,7 @@ Page multiset
                 t5.txt="ParamÃ¨tres du moteur"
                 t6.txt="ParamÃ¨tres de vitesse"
                 t7.txt="RÃ©cupÃ©ration de perte de puissance"
+                t8.txt="Affichage de plusieurs fichiers"
             }else if(langue==4)
             {
                 t0.txt="Impostazioni avanzate"
@@ -77,6 +83,7 @@ Page multiset
                 t5.txt="Parametri del motore"
                 t6.txt="Impostazioni di velocitÃ "
                 t7.txt="Recupero della perdita di potenza"
+                t8.txt="Visualizzazione di piÃ¹ file"
             }else if(langue==5)
             {
                 t0.txt="Ð Ð°ÑÑˆÐ¸Ñ€ÐµÐ½Ð½Ñ‹Ðµ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸"
@@ -85,6 +92,7 @@ Page multiset
                 t5.txt="ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ Ð¼Ð¾Ñ‚Ð¾Ñ€Ð°"
                 t6.txt="ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸"
                 t7.txt="Ð’Ð¾ÑÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ÑÐ»Ðµ Ð¿Ð¾Ñ‚ÐµÑ€Ð¸ Ð¼Ð¾Ñ‰Ð½Ð¾ÑÑ‚Ð¸"
+                t8.txt="ÐžÑ‚Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¸Ñ… Ñ„Ð°Ð¹Ð»Ð¾Ð²"
             }else if(langue==6)
             {
                 t0.txt="Erweiterte Einstellungen"
@@ -93,6 +101,7 @@ Page multiset
                 t5.txt="Motoreinstellungen"
                 t6.txt="Geschwindigkeitseinstellung"
                 t7.txt="Wiederherstellung nach Stromausfall"
+                t8.txt="Anzeige mehrerer Dateien"
             }else if(langue==7)
             {
                 t0.font=1
@@ -101,12 +110,14 @@ Page multiset
                 t5.font=1
                 t6.font=1
                 t7.font=1
+                t8.font=1
                 t0.txt="é«˜åº¦ãªè¨­å®š"
                 t1.txt="ã‚­ãƒ¼ã‚µã‚¦ãƒ³ãƒ‰"
                 t2.txt="ãƒãƒƒã‚¯ãƒ©ã‚¤ãƒˆ"
                 t5.txt="ãƒ¢ãƒ¼ã‚¿ãƒ¼è¨­å®š"
                 t6.txt="é€Ÿåº¦è¨­å®š"
                 t7.txt="åœé›»å›žå¾©"
+                t8.txt="è¤‡æ•°ãƒ•ã‚¡ã‚¤ãƒ«è¡¨ç¤º"
             }
             if(multiset.plrbutton.val==1)
             {
@@ -115,8 +126,28 @@ Page multiset
             {
                 plr.pic=76
             }
+            if(en_files==1)
+            {
+                multiset.file.pic=77
+            }else if(en_files==0)
+            {
+                multiset.file.pic=76
+            }
             losspage=42
             wepo losspage,5
+        
+        Postinitialize Event
+            if(main.version.val>=142)
+            {
+                vis p0,1
+                vis file,1
+                vis t8,1
+            }else
+            {
+                vis p0,0
+                vis file,0
+                vis t8,0
+            }
         
         Touch Press Event
             if(en_dim==1)
@@ -128,13 +159,13 @@ Page multiset
         
 Variable (int32) plrbutton
     Attributes
-        ID   : 12
+        ID   : 13
         Scope: global
         Value: 0
     
 Text t0
     Attributes
-        ID                      : 5
+        ID                      : 7
         Scope                   : global
         Dragging                : 0
         Send Component ID       : disabled
@@ -162,7 +193,7 @@ Text t0
     
 Text t2
     Attributes
-        ID                      : 8
+        ID                      : 10
         Scope                   : global
         Dragging                : 0
         Send Component ID       : disabled
@@ -190,15 +221,15 @@ Text t2
     
 Text t7
     Attributes
-        ID                      : 13
+        ID                      : 14
         Scope                   : global
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 42
-        y coordinate            : 375
-        Width                   : 174
-        Height                  : 64
+        x coordinate            : 38
+        y coordinate            : 290
+        Width                   : 181
+        Height                  : 32
         Effect                  : load
         Fill                    : transparent
         Associated Keyboard     : none
@@ -218,15 +249,15 @@ Text t7
     
 Text t1
     Attributes
-        ID                      : 14
+        ID                      : 15
         Scope                   : global
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 43
-        y coordinate            : 158
-        Width                   : 178
-        Height                  : 64
+        x coordinate            : 38
+        y coordinate            : 156
+        Width                   : 184
+        Height                  : 41
         Effect                  : load
         Fill                    : transparent
         Associated Keyboard     : none
@@ -246,15 +277,15 @@ Text t1
     
 Text t5
     Attributes
-        ID                      : 15
+        ID                      : 16
         Scope                   : global
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 43
-        y coordinate            : 231
+        x coordinate            : 38
+        y coordinate            : 201
         Width                   : 203
-        Height                  : 64
+        Height                  : 39
         Effect                  : load
         Fill                    : transparent
         Associated Keyboard     : none
@@ -274,15 +305,15 @@ Text t5
     
 Text t6
     Attributes
-        ID                      : 17
+        ID                      : 18
         Scope                   : global
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 43
-        y coordinate            : 302
+        x coordinate            : 38
+        y coordinate            : 247
         Width                   : 202
-        Height                  : 63
+        Height                  : 34
         Effect                  : load
         Fill                    : transparent
         Associated Keyboard     : none
@@ -300,15 +331,57 @@ Text t6
         Horizontal Spacing      : 0
         Vertical Spacing        : 0
     
+Text t8
+    Attributes
+        ID                      : 23
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 37
+        y coordinate            : 336
+        Width                   : 181
+        Height                  : 32
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 1
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : left
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : å¤šæ–‡ä»¶æ˜¾ç¤º
+        Max. Text Size          : 64
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+Picture p0
+    Attributes
+        ID               : 2
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 13
+        y coordinate     : 340
+        Width            : 22
+        Height           : 23
+        Effect           : load
+        Picture ID       : 192
+    
 Picture keysound
     Attributes
-        ID               : 6
+        ID               : 8
         Scope            : global
         Dragging         : 0
         Send Component ID: disabled
         Opacity          : 127
-        x coordinate     : 222
-        y coordinate     : 180
+        x coordinate     : 223
+        y coordinate     : 163
         Width            : 39
         Height           : 20
         Effect           : load
@@ -343,13 +416,13 @@ Picture keysound
         
 Picture plr
     Attributes
-        ID               : 11
+        ID               : 22
         Scope            : global
         Dragging         : 0
         Send Component ID: disabled
         Opacity          : 127
-        x coordinate     : 222
-        y coordinate     : 397
+        x coordinate     : 223
+        y coordinate     : 296
         Width            : 39
         Height           : 20
         Effect           : load
@@ -378,35 +451,74 @@ Picture plr
             printh 00 03
             q3.picc=88
         
-Crop Picture q0
+Picture file
+    Attributes
+        ID               : 24
+        Scope            : global
+        Dragging         : 0
+        Send Component ID: disabled
+        Opacity          : 127
+        x coordinate     : 223
+        y coordinate     : 340
+        Width            : 39
+        Height           : 20
+        Effect           : load
+        Picture ID       : 77
+    
+    Events
+        Touch Press Event
+            if(en_beep==1)
+            {
+                beep 50
+            }
+            q5.picc=138
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
+        
+        Touch Release Event
+            q5.picc=88
+            if(multiset.file.pic==77)
+            {
+                en_files=0
+                multiset.file.pic=76
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 10 02
+                printh 01
+                printh 00 08
+            }else if(multiset.file.pic==76)
+            {
+                en_files=1
+                multiset.file.pic=77
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 10 02
+                printh 01
+                printh 00 07
+            }
+            wepo en_files,135
+        
+Crop Picture q5
     Attributes
         ID                      : 1
         Scope                   : local
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 0
-        y coordinate            : 147
-        Width                   : 270
-        Height                  : 77
+        x coordinate            : 2
+        y coordinate            : 326
+        Width                   : 266
+        Height                  : 44
         Effect                  : load
         Cropped Back. Picture ID: 88
     
-Crop Picture q3
-    Attributes
-        ID                      : 2
-        Scope                   : local
-        Dragging                : 0
-        Send Component ID       : disabled
-        Opacity                 : 127
-        x coordinate            : 0
-        y coordinate            : 369
-        Width                   : 270
-        Height                  : 71
-        Effect                  : load
-        Cropped Back. Picture ID: 88
-    
-Crop Picture q2
+Crop Picture q0
     Attributes
         ID                      : 3
         Scope                   : local
@@ -414,29 +526,57 @@ Crop Picture q2
         Send Component ID       : disabled
         Opacity                 : 127
         x coordinate            : 0
-        y coordinate            : 297
-        Width                   : 271
-        Height                  : 71
+        y coordinate            : 147
+        Width                   : 270
+        Height                  : 50
         Effect                  : load
         Cropped Back. Picture ID: 88
     
-Crop Picture q1
+Crop Picture q3
     Attributes
         ID                      : 4
         Scope                   : local
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 65535
-        y coordinate            : 225
+        x coordinate            : 2
+        y coordinate            : 286
+        Width                   : 266
+        Height                  : 41
+        Effect                  : load
+        Cropped Back. Picture ID: 88
+    
+Crop Picture q2
+    Attributes
+        ID                      : 5
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 0
+        y coordinate            : 242
+        Width                   : 271
+        Height                  : 42
+        Effect                  : load
+        Cropped Back. Picture ID: 88
+    
+Crop Picture q1
+    Attributes
+        ID                      : 6
+        Scope                   : local
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 0
+        y coordinate            : 195
         Width                   : 272
-        Height                  : 73
+        Height                  : 46
         Effect                  : load
         Cropped Back. Picture ID: 88
     
 Crop Picture q4
     Attributes
-        ID                      : 19
+        ID                      : 20
         Scope                   : local
         Dragging                : 0
         Send Component ID       : disabled
@@ -476,7 +616,7 @@ Crop Picture q4
         
 Slider h0
     Attributes
-        ID                   : 7
+        ID                   : 9
         Scope                : global
         Dragging             : 0
         Send Component ID    : disabled
@@ -497,7 +637,7 @@ Slider h0
         Font Color           : 25356
         Position             : 50
         Upper range limit    : 50
-        Lower range limit    : 0
+        Lower range limit    : 10
     
     Events
         Touch Press Event
@@ -514,7 +654,7 @@ Slider h0
         
 Hotspot m0
     Attributes
-        ID               : 10
+        ID               : 12
         Scope            : local
         Dragging         : 0
         Send Component ID: disabled
@@ -549,15 +689,15 @@ Hotspot m0
         
 Hotspot m1
     Attributes
-        ID               : 16
+        ID               : 17
         Scope            : local
         Dragging         : 0
         Send Component ID: disabled
         Opacity          : 127
-        x coordinate     : 11
-        y coordinate     : 232
-        Width            : 251
-        Height           : 60
+        x coordinate     : 8
+        y coordinate     : 195
+        Width            : 259
+        Height           : 43
         Effect           : load
     
     Events
@@ -580,15 +720,15 @@ Hotspot m1
         
 Hotspot m2
     Attributes
-        ID               : 18
+        ID               : 19
         Scope            : local
         Dragging         : 0
         Send Component ID: disabled
         Opacity          : 127
-        x coordinate     : 16
-        y coordinate     : 300
-        Width            : 248
-        Height           : 60
+        x coordinate     : 4
+        y coordinate     : 240
+        Width            : 262
+        Height           : 42
         Effect           : load
     
     Events
@@ -611,7 +751,7 @@ Hotspot m2
         
 Timer tm0
     Attributes
-        ID         : 9
+        ID         : 11
         Scope      : local
         Period (ms): 500
         Enabled    : yes
@@ -631,7 +771,7 @@ Timer tm0
         
 Timer tm_rest
     Attributes
-        ID         : 20
+        ID         : 21
         Scope      : local
         Period (ms): 1000
         Enabled    : no

@@ -94,6 +94,17 @@ Page continueprint
                 wepo losspage,5
             }
         
+        Postinitialize Event
+            //Lcd Version
+            printh 5A A5
+            printh 08
+            printh 83
+            printh 10 40
+            printh 02
+            printh 00 07
+            printh 00
+            prints main.version.val,1
+        
         Touch Press Event
             if(en_dim==1)
             {

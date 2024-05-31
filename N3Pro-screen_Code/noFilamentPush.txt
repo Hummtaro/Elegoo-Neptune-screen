@@ -84,9 +84,9 @@ Text t1
         Send Component ID       : disabled
         Opacity                 : 127
         x coordinate            : 12
-        y coordinate            : 153
+        y coordinate            : 179
         Width                   : 249
-        Height                  : 161
+        Height                  : 137
         Effect                  : load
         Fill                    : transparent
         Associated Keyboard     : none
@@ -153,6 +153,7 @@ Text t2
                 tm_rest.en=1
                 dim=multiset.h0.val
             }
+            noFilamentPush.t0.txt=""
         
         Touch Release Event
             printh 5A A5
@@ -161,6 +162,43 @@ Text t2
             printh 10 0C
             printh 01
             printh 00 03
+        
+Text t0
+    Attributes
+        ID                      : 7
+        Scope                   : global
+        Dragging                : 0
+        Send Component ID       : disabled
+        Opacity                 : 127
+        x coordinate            : 12
+        y coordinate            : 147
+        Width                   : 249
+        Height                  : 31
+        Effect                  : load
+        Fill                    : transparent
+        Associated Keyboard     : none
+        Font ID                 : 0
+        Back. Color             : 65535
+        Cropped Back. Picture ID: 65535
+        Back. Picture ID        : 65535
+        Font Color              : 65535
+        Horizontal Alignment    : center
+        Vertical Alignment      : center
+        Input Type              : character
+        Text                    : 
+        Max. Text Size          : 256
+        Word wrap               : enabled
+        Horizontal Spacing      : 0
+        Vertical Spacing        : 0
+    
+    Events
+        Touch Press Event
+            if(en_dim==1)
+            {
+                rest_count=0
+                tm_rest.en=1
+                dim=multiset.h0.val
+            }
         
 Picture p0
     Attributes

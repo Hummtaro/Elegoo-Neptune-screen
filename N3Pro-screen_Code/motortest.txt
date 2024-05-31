@@ -1,0 +1,197 @@
+Page motortest
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Opacity            : 127
+        Width              : 272
+        Effect             : load
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+        Fill               : picture
+        Back. Picture ID   : 2
+    
+Text t0
+    Attributes
+        ID                  : 2
+        Scope               : local
+        Dragging            : 0
+        Send Component ID   : disabled
+        Opacity             : 127
+        x coordinate        : 29
+        y coordinate        : 151
+        Width               : 100
+        Height              : 100
+        Effect              : load
+        Fill                : solid color
+        Style               : flat
+        Associated Keyboard : none
+        Font ID             : 1
+        Back. Color         : 50712
+        Font Color          : 0
+        Horizontal Alignment: center
+        Vertical Alignment  : center
+        Input Type          : character
+        Text                : æ­£è½¬
+        Max. Text Size      : 10
+        Word wrap           : disabled
+        Horizontal Spacing  : 0
+        Vertical Spacing    : 0
+    
+    Events
+        Touch Press Event
+            t0.bco=1024
+            //æ­£è½¬
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 11
+        
+        Touch Release Event
+            t0.bco=50712
+        
+Text t1
+    Attributes
+        ID                  : 3
+        Scope               : local
+        Dragging            : 0
+        Send Component ID   : disabled
+        Opacity             : 127
+        x coordinate        : 144
+        y coordinate        : 151
+        Width               : 100
+        Height              : 100
+        Effect              : load
+        Fill                : solid color
+        Style               : flat
+        Associated Keyboard : none
+        Font ID             : 1
+        Back. Color         : 50712
+        Font Color          : 0
+        Horizontal Alignment: center
+        Vertical Alignment  : center
+        Input Type          : character
+        Text                : åè½¬
+        Max. Text Size      : 10
+        Word wrap           : disabled
+        Horizontal Spacing  : 0
+        Vertical Spacing    : 0
+    
+    Events
+        Touch Press Event
+            t1.bco=1024
+            //åè½¬
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 12
+        
+        Touch Release Event
+            t1.bco=50712
+        
+Text t2
+    Attributes
+        ID                  : 4
+        Scope               : local
+        Dragging            : 0
+        Send Component ID   : disabled
+        Opacity             : 127
+        x coordinate        : 86
+        y coordinate        : 276
+        Width               : 100
+        Height              : 60
+        Effect              : load
+        Fill                : solid color
+        Style               : flat
+        Associated Keyboard : none
+        Font ID             : 1
+        Back. Color         : 50712
+        Font Color          : 0
+        Horizontal Alignment: center
+        Vertical Alignment  : center
+        Input Type          : character
+        Text                : åœæ­¢
+        Max. Text Size      : 10
+        Word wrap           : disabled
+        Horizontal Spacing  : 0
+        Vertical Spacing    : 0
+    
+    Events
+        Touch Press Event
+            t2.bco=1024
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 13
+        
+        Touch Release Event
+            t2.bco=50712
+        
+Dual-state Button bt7
+    Attributes
+        ID                        : 1
+        Scope                     : local
+        Dragging                  : 0
+        Send Component ID         : disabled
+        Opacity                   : 127
+        x coordinate              : 168
+        y coordinate              : 417
+        Width                     : 101
+        Height                    : 60
+        Effect                    : load
+        Fill                      : solid color
+        Style                     : 3D auto
+        Font ID                   : 1
+        Back. Color (Unpressed)   : 50712
+        Back. Picture ID (Pressed): 65535
+        Back. Color (Pressed)     : 1024
+        Font Color (Unpressed)    : 0
+        Font Color (Pressed)      : 65535
+        Horizontal Alignment      : center
+        Vertical Alignment        : center
+        State                     : unpressed
+        Text                      : ç»“æŸæµ‹è¯•
+        Max. Text Size            : 20
+        Word wrap                 : disabled
+        Horizontal Spacing        : 0
+        Vertical Spacing          : 0
+    
+    Events
+        Touch Press Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 08
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 09
+        
+        Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 0A
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 0B
+            page main
+        

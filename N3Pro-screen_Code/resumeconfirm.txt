@@ -69,8 +69,8 @@ Page resumeconfirm
                 t2.txt="ç¢ºèª"
                 t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
             }
-            losspage=26
-            wepo losspage,5
+            //losspage=26
+            //wepo losspage,5
         
         Touch Press Event
             if(en_dim==1)
@@ -200,12 +200,13 @@ Text t3
             }
         
         Touch Release Event
-            printh 5A A5
-            printh 06
-            printh 83
-            printh 10 08
-            printh 01
-            printh 00 F0
+            page losspage
+            //printh 5A A5
+            //printh 06
+            //printh 83
+            //printh 10 08
+            //printh 01
+            //printh 00 F0
         
 Picture p0
     Attributes

@@ -16,6 +16,15 @@ Page printpause
     
     Events
         Preinitialize Event
+            //å‘é€ä¸€æ¬¡å±å¹•ç‰ˆæœ¬ä¿¡æ¯
+            printh 5A A5
+            printh 08
+            printh 83
+            printh 10 40
+            printh 02
+            printh 00 07
+            printh 00
+            prints main.version.val,1
             if(en_dim==1)
             {
                 tm_rest.en=1
@@ -140,6 +149,18 @@ Page printpause
             losspage=19
             wepo losspage,5
             wepo printpause.t0.txt,10
+        
+        Postinitialize Event
+            //èŽ·å–ä¸€æ¬¡å¼€æœºä¿¡æ¯
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 44
+            printh 01
+            printh 00 16
+            //å†™æ ‡å¿—ä½
+            wepo restFlag2,100
+            wepo restFlag1,105
         
         Touch Press Event
             if(en_dim==1)
@@ -358,7 +379,7 @@ Text fanspeed
         Opacity                 : 127
         x coordinate            : 193
         y coordinate            : 436
-        Width                   : 78
+        Width                   : 62
         Height                  : 30
         Effect                  : load
         Fill                    : transparent
@@ -371,7 +392,7 @@ Text fanspeed
         Horizontal Alignment    : left
         Vertical Alignment      : center
         Input Type              : character
-        Text                    : 255
+        Text                    : 0
         Max. Text Size          : 20
         Word wrap               : disabled
         Horizontal Spacing      : 0
@@ -981,25 +1002,6 @@ Timer tm1
         Period (ms): 5000
         Enabled    : yes
     
-    Events
-        Timer Event
-            //tm1_count.val++
-            //if(tm1_count.val==1)
-            //{
-            //  wepo restFlag2,100
-            //}else if(tm1_count.val==2)
-            //{
-            //  wepo restFlag1,105
-            //  tm1_count.val=0
-            //}
-            //else if(tm1_count.val==3)
-            //{
-            //  wepo printpause.printprocess.val,110
-            //}else if(tm1_count.val==4)
-            //{
-            //  wepo printpause.printvalue.txt,115
-            //}
-        
 Timer tm2
     Attributes
         ID         : 27

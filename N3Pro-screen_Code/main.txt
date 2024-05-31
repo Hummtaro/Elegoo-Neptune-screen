@@ -107,12 +107,36 @@ Page main
             }
         
         Postinitialize Event
+            //SaveConfig
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 40
+            printh 01
+            printh 00 05
+            //HardwareTest
             printh 5A A5
             printh 06
             printh 83
             printh 22 02
             printh 01
             printh 00 0F
+            //MotorTest
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 22 02
+            printh 01
+            printh 00 10
+            //Lcd Version
+            printh 5A A5
+            printh 08
+            printh 83
+            printh 10 40
+            printh 02
+            printh 00 07
+            printh 00
+            prints main.version.val,1
         
         Touch Press Event
             if(en_dim==1)
@@ -147,6 +171,18 @@ Variable (int32) page_return
     Attributes
         ID   : 27
         Scope: local
+        Value: 0
+    
+Variable (int32) version
+    Attributes
+        ID   : 28
+        Scope: global
+        Value: 142
+    
+Variable (int32) board_version
+    Attributes
+        ID   : 29
+        Scope: global
         Value: 0
     
 Text nozzletemp
@@ -337,7 +373,7 @@ Picture p0
             {
                 rest_count=0
                 tm_rest.en=1
-                dim=100
+                dim=multiset.h0.val
             }
         
 Picture p2
@@ -467,12 +503,24 @@ Hotspot m0
     
     Events
         Touch Press Event
-            printh 5A A5
-            printh 06
-            printh 83
-            printh 10 02
-            printh 01
-            printh 00 01
+            //æ–‡ä»¶æ˜¾ç¤º
+            if(en_files==1)
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 10 02
+                printh 01
+                printh 00 09
+            }else
+            {
+                printh 5A A5
+                printh 06
+                printh 83
+                printh 10 02
+                printh 01
+                printh 00 08
+            }
             q0.picc=29
             if(en_beep==1)
             {
@@ -511,6 +559,12 @@ Hotspot m0
             file5.t24.pco=65535
         
         Touch Release Event
+            printh 5A A5
+            printh 06
+            printh 83
+            printh 10 02
+            printh 01
+            printh 00 01
             q0.picc=0
         
 Hotspot m3
