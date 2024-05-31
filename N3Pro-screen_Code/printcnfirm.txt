@@ -13,6 +13,65 @@ Page printcnfirm
         Swide right page ID: disabled
         Fill               : no background (transparent)
     
+    Events
+        Preinitialize Event
+            if(en_dim==1)
+            {
+                tm_rest.en=1
+            }
+            t1.font=0
+            t2.font=0
+            t3.font=0
+            if(langue==0)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="æ˜¯å¦æ‰“å°è¯¥æ–‡ä»¶ï¼Ÿ"
+                t2.txt="ç¡®è®¤"
+                t3.txt="å–æ¶ˆ"
+            }else if(langue==1)
+            {
+                t1.txt="Print this model?"
+                t2.txt="Confirm"
+                t3.txt="Cancel"
+            }else if(langue==2)
+            {
+                t1.txt="Â¿Imprimir este modelo?"
+                t2.txt="Confirmar"
+                t3.txt="Cancelar"
+            }else if(langue==3)
+            {
+                t1.txt="Imprimer ce modÃ¨leÂ ?"
+                t2.txt="Confirmer"
+                t3.txt="Annuler"
+            }else if(langue==4)
+            {
+                t1.txt="Stampa questo modello?"
+                t2.txt="Conferma"
+                t3.txt="Annulla"
+            }else if(langue==5)
+            {
+                t1.txt="Ð Ð°ÑÐ¿ÐµÑ‡Ð°Ñ‚Ð°Ñ‚ÑŒ ÑÑ‚Ñƒ Ð¼Ð¾Ð´ÐµÐ»ÑŒ?"
+                t2.txt="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´Ð°Ñ‚ÑŒ"
+                t3.txt="ÐžÑ‚Ð¼ÐµÐ½Ð°"
+            }else if(langue==6)
+            {
+                t1.txt="Druckern Sie dieses Modell?"
+                t2.txt="BestÃ¤tigen"
+                t3.txt="Stornieren"
+            }else if(langue==7)
+            {
+                t1.font=1
+                t2.font=1
+                t3.font=1
+                t1.txt="ã“ã®ãƒ¢ãƒ‡ãƒ«ã‚’ãƒ—ãƒªãƒ³ãƒˆã—ã¾ã™ã‹ï¼Ÿ"
+                t2.txt="ç¢ºèª"
+                t3.txt="ã‚­ãƒ£ãƒ³ã‚»ãƒ«"
+            }
+            losspage=18
+            wepo losspage,5
+        
 Variable (int32) va0
     Attributes
         ID   : 6
@@ -100,8 +159,8 @@ Text t2
         Dragging                : 0
         Send Component ID       : disabled
         Opacity                 : 127
-        x coordinate            : 22
-        y coordinate            : 324
+        x coordinate            : 26
+        y coordinate            : 322
         Width                   : 113
         Height                  : 39
         Effect                  : load

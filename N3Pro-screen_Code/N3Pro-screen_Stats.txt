@@ -22,6 +22,10 @@ aux49_data
 	71   Component(s)
 	223  Line(s) of event code
 	94   Unique line(s) of event code
+printcnfirm
+	8    Component(s)
+	105  Line(s) of event code
+	62   Unique line(s) of event code
 aux63_data
 	85   Component(s)
 	223  Line(s) of event code
@@ -230,10 +234,6 @@ warn2_filament
 	6    Component(s)
 	108  Line(s) of event code
 	61   Unique line(s) of event code
-printcnfirm
-	8    Component(s)
-	49   Line(s) of event code
-	22   Unique line(s) of event code
 tempset
 	14   Component(s)
 	155  Line(s) of event code
@@ -338,5 +338,5 @@ set
 Total
 	83   Page(s)
 	1468 Component(s)
-	12634 Line(s) of event code
+	12690 Line(s) of event code
 	2629 Unique line(s) of event code
